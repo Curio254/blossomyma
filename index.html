@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BlossomyMa ‑ Winter & Christmas Baby Care Tips</title>
-<meta name="description" content="BlossomyMa shares winter and Christmas baby care tips, gift ideas, and essential advice for new mothers. Stay informed with daily updates!">
-<meta name="keywords" content="baby care, winter baby tips, Christmas baby tips, newborn advice, parenting tips, new mothers, baby gifts, infant care, seasonal baby care">
+<meta name="description" content="BlossomyMa provides warm, empathetic, and fun baby care tips for new mothers. Learn about feeding, sleep, health, winter care, and Christmas gifts for your newborn.">
+<meta name="keywords" content="baby care, newborn tips, breastfeeding, sleep tips, winter baby care, Christmas baby gifts, first-time mothers, parenting tips">
 
-<!-- Google tag (gtag.js) -->
+<!-- Google Tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GE4Z4MG063"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -39,7 +39,15 @@ body{display:flex;justify-content:center;padding:20px}
 }
 header{display:flex;align-items:center;gap:16px;margin-bottom:20px;flex-wrap:wrap;}
 .logo{display:flex;align-items:center;gap:12px}
-.logo-img{width:120px;max-width:100%;height:auto;object-fit:contain;display:block;border-radius:50%;border:2px solid var(--accent);}
+.logo-img{
+  width:120px;
+  max-width:100%;
+  height:auto;
+  object-fit:contain;
+  display:block;
+  border-radius:50%;
+  border:2px solid var(--accent);
+}
 .logo div h1{margin:0;font-size:32px;color:var(--accent)}
 p.lead{margin:2px 0 0;color:#555;font-size:16px;font-style:italic}
 nav{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
@@ -50,14 +58,10 @@ nav{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
 .card:hover{box-shadow:0 8px 20px rgba(0,0,0,0.15)}
 .card h2{margin:0 0 10px;font-size:22px;color:var(--accent);display:flex;align-items:center;gap:8px}
 .card h2::before{content:'❄️'}
-.deal{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-radius:var(--radius);margin-bottom:8px;background: linear-gradient(145deg, #ffe6f8, #fff0f5);box-shadow:0 2px 6px rgba(0,0,0,0.05);transition: all 0.3s ease;}
-.deal:hover{box-shadow:0 6px 12px rgba(0,0,0,0.12);transform: translateY(-2px);}
-.deal .store{font-weight:700;font-size:15px;color:#ff1493}
-.price{font-weight:700;color:#ff69b4}
-.actions{display:flex;gap:8px}
 .btn{padding:8px 14px;border-radius:12px;border:none;cursor:pointer;font-weight:600;transition:0.2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
 .btn.primary{background:var(--btn);color:white}
 .btn.primary:hover{background:#ff69b4}
+footer{margin-top:24px;font-size:14px;color:#555;text-align:center}
 #searchBar{margin-bottom: 20px;width:100%;}
 #searchInput{width:100%;padding:10px 12px;font-size:16px;border-radius:12px;border:1px solid #ffb6c1;}
 #stateFilter{margin-bottom: 20px;width:100%;padding:10px;border-radius:12px;border:1px solid #ffb6c1;}
@@ -72,17 +76,13 @@ nav{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
 #newsletter input[type="email"]{width:70%;padding:10px;border-radius:8px;border:1px solid #ffb6c1;margin-right:8px;}
 #newsletter input[type="submit"]{padding:10px 16px;background:#ff69b4;color:white;border:none;border-radius:8px;cursor:pointer;transition:0.2s;}
 #newsletter input[type="submit"]:hover{background:#ff1493;}
-footer{margin-top:24px;font-size:14px;color:#555;text-align:center;}
-footer a{margin:0 8px;}
-.home-btn{display:inline-block;margin-bottom:20px;padding:8px 16px;background:#ff1493;color:white;border-radius:8px;text-decoration:none;}
-.home-btn:hover{background:#ff69b4;}
 </style>
 </head>
 <body>
 <div class="site">
 <header>
   <div class="logo">
-    <img src="images/logo.png" alt="BlossomyMa Logo" class="logo-img">
+    <img src="logo.png" alt="BlossomyMa Logo" class="logo-img">
     <div>
       <h1>BlossomyMa</h1>
       <p class="lead">Winter & Christmas Baby Care Tips</p>
@@ -90,12 +90,9 @@ footer a{margin:0 8px;}
   </div>
 </header>
 
-<!-- Home Button -->
-<a href="index.html" class="home-btn">🏠 Home</a>
-
 <section id="about" class="card">
   <h2>About BlossomyMa</h2>
-  <p>BlossomyMa is your go-to resource for winter and Christmas baby care tips, gift ideas, and advice for first-time mothers. Subscribe to get daily updates!</p>
+  <p>BlossomyMa offers warm, empathetic, and fun guidance for first-time mothers. From feeding to sleep, health, winter care, and Christmas gifts, we make parenting joyful and stress-free!</p>
 </section>
 
 <div id="searchBar">
@@ -119,8 +116,73 @@ footer a{margin:0 8px;}
   <div class="chip" data-cat="gifts">Christmas Gifts</div>
 </nav>
 
-<div class="grid" id="dealsGrid"></div>
-<div class="pagination" id="pagination"></div>
+<div class="grid" id="dealsGrid">
+
+<!-- Feeding -->
+<section class="card" id="feeding">
+  <h2>Feeding & Hospital Bag Essentials</h2>
+  <p>Prepare your hospital bag with love and care for both you and your newborn:</p>
+  <ul>
+    <li><strong>Mom:</strong> Nightgowns, breastfeeding bras, nipple cream, adult diapers (medically safe), toiletries, snacks, water bottle.</li>
+    <li><strong>Baby:</strong> Onesies, hats, socks, mittens, diapers, wipes, soft toy, and a cozy blanket.</li>
+  </ul>
+  <p><strong>Breastfeeding Tips:</strong> Milk flow, engorgement, and nipple tenderness are normal. Express a little milk, use warm compresses, stay hydrated, and eat oats, leafy greens, and other lactation-supporting foods. Patience is key!</p>
+  <p><strong>Engorged Breasts & Painful Latching:</strong> Gentle massage, nipple shields, deep latch, frequent feeding. Delayed milk flow in well-endowed women is normal and improves with diet and care.</p>
+  <p><em>Do you have questions about feeding and breastfeeding? Share them with us!</em></p>
+</section>
+
+<!-- Sleep -->
+<section class="card" id="sleep">
+  <h2>Sleep Tips for Newborns</h2>
+  <p>Understand your baby’s sleep and create a cozy, safe environment:</p>
+  <ul>
+    <li>Newborns sleep 14–17 hours/day in short intervals; night waking is normal.</li>
+    <li>Safe sleep: flat firm mattress, swaddle or sleep sack, no loose blankets or toys.</li>
+    <li>Soothing: gentle rocking, white noise, lullabies, dim lighting.</li>
+    <li>Mom’s rest: take naps when possible, track sleep, maintain gentle routines.</li>
+  </ul>
+  <p><em>Do you have questions about your newborn’s sleep patterns? Share them with us!</em></p>
+</section>
+
+<!-- Health -->
+<section class="card" id="health">
+  <h2>Mother & Baby Health</h2>
+  <p>Maintain wellness for both mother and baby with these tips:</p>
+  <ul>
+    <li>Postpartum: monitor bleeding, energy, gentle exercises, hydration, balanced diet.</li>
+    <li>Emotional wellbeing: mood swings are normal; seek support if needed.</li>
+    <li>Newborn health: track feeding, diapers, weight, vaccinations, check-ups.</li>
+    <li>Bonding: skin-to-skin contact, gentle massage, regulate temperature.</li>
+  </ul>
+  <p><em>Do you want more guidance on postpartum recovery and newborn health care?</em></p>
+</section>
+
+<!-- Winter Care -->
+<section class="card" id="winter-care">
+  <h2>Winter Baby Care</h2>
+  <p>Keep your baby safe, warm, and cozy during cold months:</p>
+  <ul>
+    <li>Clothing: light layers, hat, socks, mittens; avoid overheating.</li>
+    <li>Skin care: gentle moisturizers to prevent dryness.</li>
+    <li>Environment: warm, draft-free nursery; use humidifier if needed.</li>
+    <li>Mom’s tips: clean hands, monitor temperature, comfy night feeds.</li>
+  </ul>
+  <p><em>Do you have questions about winter baby care or keeping your little one safe?</em></p>
+</section>
+
+<!-- Christmas Gifts -->
+<section class="card" id="christmas-gifts">
+  <h2>Christmas Gifts & Baby Essentials</h2>
+  <p>Celebrate your first holiday season with thoughtful, safe gifts:</p>
+  <ul>
+    <li>Soft toys, sensory play items, board books, rattles, personalized clothing.</li>
+    <li>Cozy blankets, holiday-themed onesies, baby-safe decorations.</li>
+    <li>Avoid choking hazards; make gift time a bonding experience.</li>
+  </ul>
+  <p><em>Do you need advice on age-appropriate gifts or holiday activities for your newborn?</em></p>
+</section>
+
+</div>
 
 <div id="newsletter">
   <h2>Subscribe to Daily Winter Baby Tips</h2>
@@ -142,17 +204,17 @@ footer a{margin:0 8px;}
 </div>
 
 <footer>
-  <div>BlossomyMa shares baby care tips and ideas. Affiliate links and donations help us keep content free.</div>
-  <div>
-    <a href="affiliatedisclosure.html">Affiliate Disclosure</a> | 
-    <a href="privacy.html">Privacy Policy</a> | 
-    <a href="terms.html">Terms & Conditions</a> | 
-    <a href="disclaimer.html">Disclaimer</a> | 
-    <a href="contact.html">Contact</a>
+  <div>BlossomyMa shares baby care tips and ideas. Affiliate links and donations help keep content free.</div>
+  <div style="margin-top:8px;font-size:13px;color:#444">
+    <strong>Links:</strong> 
+    <a href="/affiliatedisclosure.html">Affiliate Disclosure</a> | 
+    <a href="/privacy.html">Privacy Policy</a> | 
+    <a href="/terms.html">Terms & Conditions</a> | 
+    <a href="/disclaimer.html">Disclaimer</a> | 
+    <a href="/contact.html">Contact Us</a>
   </div>
 </footer>
 
-<!-- PayPal SDK -->
 <script src="https://www.paypal.com/sdk/js?client-id=AZXqUORsfzvKK9Rr3kVxdiAEiF9MFV2Mu9bWqgnCIAyrVER8-6tkl8SFMWSmQCoQgcCeQu0342mtFNNW&currency=USD"></script>
 <script>
 function setAmount(value){ document.getElementById('donationAmount').value = value; }
@@ -160,7 +222,7 @@ paypal.Buttons({
     style: { layout: 'horizontal', color: 'gold', shape: 'pill', label: 'donate', height:40 },
     createOrder: function(data, actions){
         const amount = document.getElementById('donationAmount').value;
-        return actions.order.create({ purchase_units:[{ amount:{ value: amount }}]});
+        return actions.order.create({ purchase_units:[{ amount:{ value: amount }}]} );
     },
     onApprove: function(data, actions){
         return actions.order.capture().then(function(details){
@@ -169,76 +231,5 @@ paypal.Buttons({
     }
 }).render('#paypal-button-container');
 </script>
-
-<script>
-// Sample content for baby tips
-const categories = ["feeding","sleep","health","care","gifts"];
-const sampleProducts = [];
-categories.forEach(cat=>{
-    for(let i=1;i<=50;i++){
-        const productName = `${cat.charAt(0).toUpperCase() + cat.slice(1)} Tip ${i}`;
-        sampleProducts.push({ category: cat, product: productName, link:"#", price:"" });
-    }
-});
-
-const dealsGrid = document.getElementById("dealsGrid");
-const searchInput = document.getElementById("searchInput");
-const categoryChips = document.querySelectorAll(".chip");
-let activeCategory = "";
-let currentPage = 1;
-const ITEMS_PER_PAGE = 10;
-
-function renderDealsPage(deals, page=1){
-    dealsGrid.innerHTML = "";
-    const start = (page-1)*ITEMS_PER_PAGE;
-    const filteredDeals = deals.filter(d =>
-        (!activeCategory || d.category===activeCategory) &&
-        (!searchInput.value || d.product.toLowerCase().includes(searchInput.value.toLowerCase()))
-    );
-    const pagedDeals = filteredDeals.slice(start, start+ITEMS_PER_PAGE);
-    pagedDeals.forEach(d=>{
-        const div = document.createElement("div");
-        div.className = "deal";
-        div.innerHTML = `<div class="info">🎁 ${d.product}</div>
-                        <div class="actions">
-                          ${d.price ? `<div class="price">${d.price}</div>` : ""}
-                          <a class="btn primary" href="${d.link}" target="_blank">Read More</a>
-                        </div>`;
-        dealsGrid.appendChild(div);
-    });
-    renderPagination(filteredDeals);
-}
-
-function renderPagination(filteredDeals){
-    const pagination = document.getElementById("pagination");
-    pagination.innerHTML="";
-    const totalPages = Math.ceil(filteredDeals.length / ITEMS_PER_PAGE);
-    if(currentPage>1){
-        const prev = document.createElement("button");
-        prev.textContent="Previous";
-        prev.onclick=()=>{ currentPage--; renderDealsPage(sampleProducts,currentPage); };
-        pagination.appendChild(prev);
-    }
-    if(currentPage<totalPages){
-        const next = document.createElement("button");
-        next.textContent="Next";
-        next.onclick=()=>{ currentPage++; renderDealsPage(sampleProducts,currentPage); };
-        pagination.appendChild(next);
-    }
-}
-
-searchInput.addEventListener("input",()=>{ currentPage=1; renderDealsPage(sampleProducts,currentPage); });
-categoryChips.forEach(chip=>{
-    chip.addEventListener("click",()=>{
-        activeCategory = (activeCategory===chip.dataset.cat) ? "" : chip.dataset.cat;
-        currentPage=1;
-        renderDealsPage(sampleProducts,currentPage);
-    });
-});
-
-renderDealsPage(sampleProducts,currentPage);
-</script>
-
-</div>
 </body>
 </html>
