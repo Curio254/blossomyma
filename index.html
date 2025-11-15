@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BlossomyMa ‑ Winter & Christmas Baby Care Tips</title>
 <meta name="description" content="BlossomyMa shares warm, fun, and empathetic baby care tips, gift ideas, and essential advice for new mothers. Subscribe for daily updates!">
@@ -28,78 +28,78 @@
   --white: #FFFFFF;
   --light-gray-bg: #f9f9f9;
   --radius:16px;
+  --maxw:1200px;
+  font-family: 'Poppins', sans-serif;
 }
 
-* { box-sizing: border-box; margin:0; padding:0; }
-body { font-family: 'Poppins', sans-serif; background: var(--light-gray-bg); color: var(--dark-text); line-height:1.5; }
-a { text-decoration:none; color: var(--dusty-rose); }
+body{margin:0;padding:0;background:var(--light-gray-bg);color:var(--dark-text);}
+.container{max-width:var(--maxw);margin:0 auto;padding:20px;}
+.utility-header{background:var(--sage-green);color:var(--white);font-size:14px;padding:6px 20px;text-align:right;border-radius:0 0 var(--radius) var(--radius);}
+.utility-header a{color:var(--white);text-decoration:none;margin-left:12px;}
+.utility-header a:hover{opacity:0.8;}
 
-.container { max-width: 1200px; margin: auto; padding: 20px; }
+.site-header{display:flex;align-items:center;gap:16px;padding:20px 0;flex-wrap:wrap;}
+.site-header h1{margin:0;color:var(--dusty-rose);}
+.site-header p{margin:4px 0 0;color:var(--light-text);font-style:italic;}
 
-/* Header & Nav */
-.utility-header { background: var(--sage-green); color: white; padding: 6px 20px; font-size:14px; text-align:right; }
-.utility-header a { color: white; margin-left:12px; font-weight:500; }
-.site-header { display:flex; align-items:center; justify-content: space-between; flex-wrap:wrap; padding:20px 0; }
-.site-header h1 { color: var(--dusty-rose); font-size:36px; }
-.site-header p { color: var(--light-text); font-style:italic; margin-top:4px; }
-.main-nav { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:30px; }
-.main-nav a { padding:6px 12px; border-radius:8px; transition:0.2s; }
-.main-nav a:hover { background: var(--dusty-rose); color:white; }
+.main-nav{text-align:center;margin-bottom:40px;}
+.main-nav a{margin:0 12px;color:var(--dark-text);text-decoration:none;font-weight:600;}
+.main-nav a:hover{color:var(--dusty-rose);}
 
-/* Hero Section */
-.hero { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; background:white; border-radius:var(--radius); padding:40px; margin-bottom:40px; box-shadow:0 4px 20px rgba(0,0,0,0.05);}
-.hero-text { flex:1 1 500px; margin-right:20px; }
-.hero-text h1 { font-size:32px; color: var(--dusty-rose); margin-bottom:12px; }
-.hero-text p { font-size:18px; color: var(--dark-text); margin-bottom:16px; }
-.hero-form input[type="email"] { padding:12px; width:70%; border-radius:8px; border:1px solid #ccc; margin-right:8px; }
-.hero-form input[type="submit"] { padding:12px 20px; background: var(--dusty-rose); color:white; border:none; border-radius:8px; cursor:pointer; transition:0.2s; }
-.hero-form input[type="submit"]:hover { background:#c07b8f; }
+.hero{display:flex;flex-wrap:wrap;gap:30px;background:white;border-radius:var(--radius);padding:40px;box-shadow:0 6px 20px rgba(0,0,0,0.05);margin-bottom:50px;}
+.hero-text{flex:1;min-width:280px;}
+.hero-text h1{color:var(--dusty-rose);margin-bottom:16px;font-size:30px;line-height:1.3;}
+.hero-text p{color:var(--dark-text);line-height:1.6;margin-bottom:20px;font-size:16px;}
+.hero-form{flex:1;min-width:280px;background:var(--light-gray-bg);padding:25px;border-radius:var(--radius);}
+.hero-form h2{color:var(--dusty-rose);margin-bottom:16px;font-size:18px;}
+.hero-form input[type="email"]{width:100%;padding:12px;margin-bottom:12px;border-radius:8px;border:1px solid #ccc;font-size:15px;}
+.hero-form input[type="submit"]{width:100%;padding:12px;background:var(--dusty-rose);color:white;border:none;border-radius:8px;cursor:pointer;font-size:16px;font-weight:600;}
+.hero-form input[type="submit"]:hover{background:#c97c90;}
 
-/* Tips Grid */
-.tips-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:20px; margin-bottom:40px; }
-.card { background:white; padding:20px; border-radius:var(--radius); border:1px solid #e0e0e0; box-shadow:0 4px 8px rgba(0,0,0,0.05); }
-.card h2 { color: var(--dusty-rose); margin-bottom:10px; font-size:22px; display:flex; align-items:center; gap:8px; }
-.card h2::before { content:'❄️'; }
-.card ul { margin-left:20px; margin-bottom:12px; }
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin-bottom:50px;}
+.card{background:white;padding:25px;border-radius:var(--radius);box-shadow:0 4px 12px rgba(0,0,0,0.05);transition:transform 0.2s, box-shadow 0.2s;}
+.card:hover{transform:translateY(-4px);box-shadow:0 6px 18px rgba(0,0,0,0.08);}
+.card h2{color:var(--dusty-rose);margin-bottom:12px;font-size:20px;}
+.card ul{padding-left:20px;margin-bottom:15px;font-size:15px;}
+.card a.pdf-link{display:inline-block;margin-top:8px;padding:8px 14px;background:var(--dusty-rose);color:white;text-decoration:none;border-radius:8px;font-weight:600;}
+.card a.pdf-link:hover{background:#c97c90;}
 
-/* Floating Sidebar */
-.floating-sidebar { position: fixed; right: 20px; top: 120px; width: 300px; display:flex; flex-direction:column; gap:20px; z-index:999; }
-@media(max-width:1024px){ .floating-sidebar { position:static; width:100%; margin:20px auto; } }
-.floating-sidebar .feedback-form,
-.floating-sidebar .donation-box { background:white; padding:20px; border-radius:var(--radius); box-shadow:0 4px 12px rgba(0,0,0,0.1); }
-.floating-sidebar h2 { color: var(--dusty-rose); margin-bottom:12px; }
-.floating-sidebar input,
-.floating-sidebar textarea { width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #ccc; }
-.floating-sidebar input[type="submit"] { background: var(--dusty-rose); color:white; font-weight:600; cursor:pointer; border:none; transition:0.2s; }
-.floating-sidebar input[type="submit"]:hover { background:#c07b8f; }
-.floating-sidebar button { margin:4px 4px 4px 0; padding:8px 12px; border:none; border-radius:8px; background: var(--dusty-rose); color:white; font-weight:600; cursor:pointer; transition:0.2s; }
-.floating-sidebar button:hover { background:#c07b8f; }
-.floating-sidebar input[type="number"] { width:70px; padding:6px; border-radius:6px; border:1px solid #ccc; margin-left:8px; }
+.feedback-donate{display:flex;flex-wrap:wrap;gap:25px;margin-bottom:60px;}
+.feedback, .donate{flex:1;min-width:280px;background:white;padding:25px;border-radius:var(--radius);box-shadow:0 4px 12px rgba(0,0,0,0.05);}
+.feedback h2,.donate p{color:var(--dusty-rose);margin-bottom:12px;font-size:18px;}
+.feedback input, .feedback textarea{width:100%;padding:10px;margin-bottom:12px;border-radius:6px;border:1px solid #ccc;font-size:15px;}
+.feedback input[type="submit"]{background:var(--dusty-rose);color:white;border:none;padding:12px;border-radius:6px;cursor:pointer;font-weight:600;font-size:15px;}
+.feedback input[type="submit"]:hover{background:#c97c90;}
 
-/* Footer */
-footer { text-align:center; padding:20px; font-size:14px; color:var(--light-text); margin-top:40px; }
-footer a { color:var(--dusty-rose); margin:0 6px; }
+.donate .paypal-presets button{margin:4px 4px 0 0;padding:8px 14px;border:none;border-radius:6px;background:var(--dusty-rose);color:white;font-weight:600;cursor:pointer;}
+.donate .paypal-presets button:hover{background:#c97c90;}
+.donate input.paypal-amount{width:80px;padding:6px;border-radius:6px;border:1px solid #ccc;margin-right:8px;}
+
+footer{text-align:center;font-size:14px;color:var(--light-text);margin-bottom:20px;}
+footer a{color:var(--dark-text);text-decoration:none;margin:0 6px;}
+footer a:hover{color:var(--dusty-rose);}
+
+@media(max-width:768px){
+  .hero{flex-direction:column;}
+  .feedback-donate{flex-direction:column;}
+}
 </style>
 </head>
 <body>
 
-<!-- Top Utility Header -->
 <div class="utility-header">
   <a href="/affiliatedisclosure.html">Affiliate Disclosure</a> |
   <a href="/privacy.html">Privacy Policy</a> |
   <a href="/contact.html">Contact Us</a>
 </div>
 
-<!-- Main Header -->
 <div class="container">
-  <div class="site-header">
-    <div>
-      <h1>BlossomyMa</h1>
-      <p>Winter & Christmas Baby Care Tips</p>
-    </div>
-  </div>
 
-  <!-- Navigation -->
+  <header class="site-header">
+    <h1>BlossomyMa</h1>
+    <p>Winter & Christmas Baby Care Tips</p>
+  </header>
+
   <nav class="main-nav">
     <a href="#hospital-bag">Hospital Bag</a>
     <a href="#feeding">Feeding</a>
@@ -109,125 +109,130 @@ footer a { color:var(--dusty-rose); margin:0 6px; }
     <a href="#christmas-gifts">Christmas Gifts</a>
   </nav>
 
-  <!-- Hero Section -->
-  <div class="hero">
+  <section class="hero">
     <div class="hero-text">
       <h1>Cozy Moments, Expert Care: Your Guide to Winter & Christmas Baby Prep</h1>
-      <p>Welcome to BlossomyMa. Navigating baby care during the holidays and cold months can be overwhelming. We cut through the noise with gentle, practical advice—from packing the perfect hospital bag to ensuring safe sleep and finding the best festive gifts. <strong>Get started with your free tips below!</strong></p>
-      <form class="hero-form" action="https://blossomyma.us11.list-manage.com/subscribe/post?u=760f96232f0016bda6c19cd6e&id=f47b15011e" method="post" target="_blank">
+      <p>Welcome to BlossomyMa. Navigating baby care during the holidays and cold months can be overwhelming. We cut through the noise with gentle, practical advice—from packing the perfect hospital bag to ensuring safe sleep and finding the best festive gifts. Get started with your free tips below!</p>
+    </div>
+    <div class="hero-form">
+      <h2>Join 10,000+ happy parents!</h2>
+      <form action="https://blossomyma.us11.list-manage.com/subscribe/post?u=760f96232f0016bda6c19cd6e&amp;id=f47b15011e" method="post" target="_blank">
         <input type="email" name="EMAIL" placeholder="Your email address" required>
         <input type="submit" value="Subscribe">
       </form>
     </div>
-    <div class="hero-image">
-      <img src="hero-baby.png" alt="Happy baby" style="max-width:100%; border-radius:var(--radius);">
-    </div>
-  </div>
+  </section>
 
-  <!-- Tips Grid -->
-  <div class="tips-grid">
-    <div id="hospital-bag" class="card">
-      <h2>Hospital Bag Essentials & Prep</h2>
+  <div class="grid">
+    <!-- Cards -->
+    <div class="card" id="hospital-bag">
+      <h2>❄️ Hospital Bag Essentials & Prep</h2>
       <ul>
-        <li>Comfy outfits for mom</li>
-        <li>Toiletries & pampering items</li>
-        <li>Important documents</li>
-        <li>Baby essentials</li>
-        <li>Optional fun extras</li>
+        <li>Comfy outfits for mom – soft robes, slippers, cozy socks!</li>
+        <li>Toiletries & pampering items – face wipes, lip balm, mini lotion</li>
+        <li>Important docs – ID, insurance, birth plan</li>
+        <li>Baby essentials – onesies, swaddles, diapers, cute hats!</li>
+        <li>Optional fun extras – camera, snacks, charger, playlist for labor</li>
       </ul>
-      <p><a href="hospital-bag-guide.pdf" target="_blank">Download full PDF guide for $1</a></p>
+      <a class="pdf-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=evakihonge@gmail.com&item_name=Hospital%20Bag%20Guide&amount=1&currency_code=USD" target="_blank">Download full PDF guide for $1</a>
     </div>
-    <div id="feeding" class="card">
-      <h2>Feeding Tips</h2>
+
+    <div class="card" id="feeding">
+      <h2>❄️ Feeding Tips</h2>
       <ul>
-        <li>Softening engorged breasts</li>
-        <li>Warm compresses & gentle stimulation</li>
-        <li>Deep latch techniques</li>
-        <li>Hydration & healthy diet</li>
+        <li>Softening engorged breasts before feeding helps a comfy latch</li>
+        <li>Warm compresses & gentle stimulation improve milk flow</li>
+        <li>Deep latch techniques make feeding smoother</li>
+        <li>Hydration & healthy diet help boost milk naturally</li>
       </ul>
-      <p><a href="feeding-guide.pdf" target="_blank">Download full PDF guide for $1</a></p>
+      <a class="pdf-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=evakihonge@gmail.com&item_name=Feeding%20Guide&amount=1&currency_code=USD" target="_blank">Download full PDF guide for $1</a>
     </div>
-    <div id="sleep" class="card">
-      <h2>Sleep Tips</h2>
+
+    <div class="card" id="sleep">
+      <h2>❄️ Sleep Tips</h2>
       <ul>
-        <li>Bedtime routine with soothing songs</li>
-        <li>Keep room temperature comfy</li>
-        <li>Swaddle snugly</li>
-        <li>Safe sleep position</li>
+        <li>Establish a bedtime routine with soothing songs</li>
+        <li>Keep room temperature comfy – not too hot or cold</li>
+        <li>Swaddle baby snugly but safely</li>
+        <li>Encourage daytime naps for happy nights</li>
       </ul>
-      <p><a href="sleep-guide.pdf" target="_blank">Download full PDF guide for $1</a></p>
+      <a class="pdf-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=evakihonge@gmail.com&item_name=Sleep%20Guide&amount=1&currency_code=USD" target="_blank">Download full PDF guide for $1</a>
     </div>
-    <div id="health" class="card">
-      <h2>Health Tips</h2>
+
+    <div class="card" id="health">
+      <h2>❄️ Health Tips</h2>
       <ul>
-        <li>Postpartum recovery</li>
-        <li>Scheduled vaccinations</li>
-        <li>Mental health support</li>
-        <li>Hydration & nutrition</li>
+        <li>Monitor postpartum recovery & consult doctors as needed</li>
+        <li>Ensure baby gets scheduled vaccinations</li>
+        <li>Support your mental health – it’s okay to ask for help</li>
+        <li>Maintain hydration and nutritious diet</li>
       </ul>
-      <p><a href="health-guide.pdf" target="_blank">Download full PDF guide for $1</a></p>
+      <a class="pdf-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=evakihonge@gmail.com&item_name=Health%20Guide&amount=1&currency_code=USD" target="_blank">Download full PDF guide for $1</a>
     </div>
-    <div id="winter-care" class="card">
-      <h2>Winter Care Tips</h2>
+
+    <div class="card" id="winter-care">
+      <h2>❄️ Winter Care Tips</h2>
       <ul>
-        <li>Dress baby in layers</li>
-        <li>Protect skin from dry air</li>
-        <li>Warm baths & moisturizers</li>
-        <li>Comfortable room heating</li>
+        <li>Dress baby in layers and soft fabrics</li>
+        <li>Protect skin from dry winter air</li>
+        <li>Warm baths & gentle moisturizers</li>
+        <li>Keep rooms comfortably heated</li>
       </ul>
-      <p><a href="winter-care-guide.pdf" target="_blank">Download full PDF guide for $1</a></p>
+      <a class="pdf-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=evakihonge@gmail.com&item_name=Winter%20Care%20Guide&amount=1&currency_code=USD" target="_blank">Download full PDF guide for $1</a>
     </div>
-    <div id="christmas-gifts" class="card">
-      <h2>Christmas Gift Ideas</h2>
+
+    <div class="card" id="christmas-gifts">
+      <h2>❄️ Christmas Gift Ideas</h2>
       <ul>
         <li>Soft toys & educational gifts</li>
-        <li>Festive clothing & accessories</li>
+        <li>Festive clothing & cute accessories</li>
         <li>Books & sensory toys</li>
-        <li>Baby-safe stocking stuffers</li>
+        <li>Stocking stuffers that are baby-safe</li>
       </ul>
-      <p><a href="christmas-gifts-guide.pdf" target="_blank">Download full PDF guide for $1</a></p>
+      <a class="pdf-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=evakihonge@gmail.com&item_name=Christmas%20Gifts%20Guide&amount=1&currency_code=USD" target="_blank">Download full PDF guide for $1</a>
     </div>
   </div>
-</div>
 
-<!-- Floating Sidebar -->
-<div class="floating-sidebar">
-  <!-- Feedback Form -->
-  <div class="feedback-form">
-    <h2>Send Your Feedback</h2>
-    <form action="https://formspree.io/f/xjkjokor" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-      <input type="submit" value="Send Feedback">
-    </form>
-  </div>
-
-  <!-- PayPal Donation -->
-  <div class="donation-box">
-    <h2>Support BlossomyMa</h2>
-    <div>
-      <button onclick="setAmount(5)">$5</button>
-      <button onclick="setAmount(10)">$10</button>
-      <button onclick="setAmount(20)">$20</button>
-      <input type="number" id="donationAmount" min="1" value="5">
+  <div class="feedback-donate">
+    <!-- Feedback Form (Formspree) -->
+    <div class="feedback">
+      <h2>Send Your Feedback</h2>
+      <form action="https://formspree.io/f/xjkjokor" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="_replyto" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <input type="submit" value="Send">
+      </form>
     </div>
-    <div id="paypal-button-container" style="margin-top:12px;"></div>
+
+    <!-- Donation -->
+    <div class="donate">
+      <p>Support BlossomyMa via PayPal</p>
+      <div class="paypal-presets">
+        <button onclick="setAmount(5)">Donate $5</button>
+        <button onclick="setAmount(10)">Donate $10</button>
+        <button onclick="setAmount(20)">Donate $20</button>
+      </div>
+      <input type="number" id="donationAmount" class="paypal-amount" min="1" value="5">
+      <div id="paypal-button-container"></div>
+    </div>
   </div>
+
 </div>
 
-<!-- Footer -->
 <footer>
-  BlossomyMa shares baby care tips and ideas. Affiliate links and donations help us keep content free.<br>
-  &copy; 2025 BlossomyMa | <a href="/terms.html">Terms & Conditions</a> | <a href="/disclaimer.html">Disclaimer</a>
+  &copy; 2025 BlossomyMa. All rights reserved.
+  <br>
+  <a href="/affiliatedisclosure.html">Affiliate Disclosure</a> |
+  <a href="/privacy.html">Privacy Policy</a> |
+  <a href="/contact.html">Contact Us</a>
 </footer>
 
-<!-- PayPal SDK -->
 <script src="https://www.paypal.com/sdk/js?client-id=AZXqUORsfzvKK9Rr3kVxdiAEiF9MFV2Mu9bWqgnCIAyrVER8-6tkl8SFMWSmQCoQgcCeQu0342mtFNNW&currency=USD"></script>
 <script>
 function setAmount(value){ document.getElementById('donationAmount').value = value; }
 paypal.Buttons({
-    style: { layout: 'vertical', color: 'gold', shape: 'pill', label: 'donate', height:40 },
+    style: { layout: 'horizontal', color: 'gold', shape: 'pill', label: 'donate', height:40 },
     createOrder: function(data, actions){
         const amount = document.getElementById('donationAmount').value;
         return actions.order.create({ purchase_units:[{ amount:{ value: amount }}]});
