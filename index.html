@@ -43,4 +43,193 @@ nav{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
 .card h2::before{content:'❄️'}
 .deal{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-radius:var(--radius);margin-bottom:8px;background: linear-gradient(145deg, #ffe6f8, #fff0f5);box-shadow:0 2px 6px rgba(0,0,0,0.05);transition: all 0.3s ease;}
 .deal:hover{box-shadow:0 6px 12px rgba(0,0,0,0.12);transform: translateY(-2px);}
-.de
+.deal .store{font-weight:700;font-size:15px;color:#ff1493}
+.price{font-weight:700;color:#ff69b4}
+.actions{display:flex;gap:8px}
+.btn{padding:8px 14px;border-radius:12px;border:none;cursor:pointer;font-weight:600;transition:0.2s;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn.primary{background:var(--btn);color:white}
+.btn.primary:hover{background:#ff69b4}
+#searchBar{margin-bottom: 20px;width:100%;}
+#searchInput{width:100%;padding:10px 12px;font-size:16px;border-radius:12px;border:1px solid #ffb6c1;}
+#stateFilter{margin-bottom: 20px;width:100%;padding:10px;border-radius:12px;border:1px solid #ffb6c1;}
+.buyCoffee{margin-top:24px;padding:16px;background:#fff0f5;border-radius:var(--radius);}
+.buyCoffee p{margin-bottom:8px;font-weight:600;color:#ff1493;}
+.paypal-container{margin-top:12px;}
+.paypal-amount{width:80px;padding:6px;border-radius:6px;border:1px solid #ffb6c1;margin-right:8px;}
+.paypal-presets button{margin:0 4px 4px 0;padding:6px 12px;border-radius:6px;border:none;cursor:pointer;font-weight:600;background:#ff69b4;color:white;transition:0.2s;}
+.paypal-presets button:hover{background:#ff1493;}
+#newsletter{margin-top:24px;padding:16px;background:#ffe6f8;border-radius:var(--radius);}
+#newsletter h2{color:#ff1493;margin-bottom:12px;}
+#newsletter input[type="email"]{width:70%;padding:10px;border-radius:8px;border:1px solid #ffb6c1;margin-right:8px;}
+#newsletter input[type="submit"]{padding:10px 16px;background:#ff69b4;color:white;border:none;border-radius:8px;cursor:pointer;transition:0.2s;}
+#newsletter input[type="submit"]:hover{background:#ff1493;}
+footer{margin-top:24px;font-size:14px;color:#555;text-align:center;}
+footer a{margin:0 8px;}
+.home-btn{display:inline-block;margin-bottom:20px;padding:8px 16px;background:#ff1493;color:white;border-radius:8px;text-decoration:none;}
+.home-btn:hover{background:#ff69b4;}
+</style>
+</head>
+<body>
+<div class="site">
+<header>
+  <div class="logo">
+    <img src="images/logo.png" alt="BlossomyMa Logo" class="logo-img">
+    <div>
+      <h1>BlossomyMa</h1>
+      <p class="lead">Winter & Christmas Baby Care Tips</p>
+    </div>
+  </div>
+</header>
+
+<!-- Home Button -->
+<a href="index.html" class="home-btn">🏠 Home</a>
+
+<section id="about" class="card">
+  <h2>About BlossomyMa</h2>
+  <p>BlossomyMa is your go-to resource for winter and Christmas baby care tips, gift ideas, and advice for first-time mothers. Subscribe to get daily updates!</p>
+</section>
+
+<div id="searchBar">
+  <input id="searchInput" type="text" placeholder="Search tips or topics e.g. #feeding, #sleep">
+</div>
+
+<div id="stateFilter">
+  <select id="stateSelect">
+    <option value="">All Regions</option>
+    <option value="NA">North America</option>
+    <option value="EU">Europe</option>
+    <option value="OTHER">Other</option>
+  </select>
+</div>
+
+<nav id="categories">
+  <div class="chip" data-cat="feeding">Feeding</div>
+  <div class="chip" data-cat="sleep">Sleep</div>
+  <div class="chip" data-cat="health">Health</div>
+  <div class="chip" data-cat="care">Winter Care</div>
+  <div class="chip" data-cat="gifts">Christmas Gifts</div>
+</nav>
+
+<div class="grid" id="dealsGrid"></div>
+<div class="pagination" id="pagination"></div>
+
+<div id="newsletter">
+  <h2>Subscribe to Daily Winter Baby Tips</h2>
+  <form action="https://blossomyma.us11.list-manage.com/subscribe/post?u=760f96232f0016bda6c19cd6e&amp;id=f47b15011e" method="post" target="_blank">
+    <input type="email" name="EMAIL" placeholder="Your email address" required>
+    <input type="submit" value="Subscribe">
+  </form>
+</div>
+
+<div class="buyCoffee">
+  <p>Support BlossomyMa via PayPal</p>
+  <div class="paypal-presets">
+    <button onclick="setAmount(5)">Donate $5</button>
+    <button onclick="setAmount(10)">Donate $10</button>
+    <button onclick="setAmount(20)">Donate $20</button>
+  </div>
+  <input type="number" id="donationAmount" class="paypal-amount" min="1" value="5">
+  <div id="paypal-button-container" class="paypal-container"></div>
+</div>
+
+<footer>
+  <div>BlossomyMa shares baby care tips and ideas. Affiliate links and donations help us keep content free.</div>
+  <div>
+    <a href="affiliatedisclosure.html">Affiliate Disclosure</a> | 
+    <a href="privacy.html">Privacy Policy</a> | 
+    <a href="terms.html">Terms & Conditions</a> | 
+    <a href="disclaimer.html">Disclaimer</a> | 
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+
+<!-- PayPal SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=AZXqUORsfzvKK9Rr3kVxdiAEiF9MFV2Mu9bWqgnCIAyrVER8-6tkl8SFMWSmQCoQgcCeQu0342mtFNNW&currency=USD"></script>
+<script>
+function setAmount(value){ document.getElementById('donationAmount').value = value; }
+paypal.Buttons({
+    style: { layout: 'horizontal', color: 'gold', shape: 'pill', label: 'donate', height:40 },
+    createOrder: function(data, actions){
+        const amount = document.getElementById('donationAmount').value;
+        return actions.order.create({ purchase_units:[{ amount:{ value: amount }}]});
+    },
+    onApprove: function(data, actions){
+        return actions.order.capture().then(function(details){
+            alert('Thank you for your donation, '+details.payer.name.given_name+'!');
+        });
+    }
+}).render('#paypal-button-container');
+</script>
+
+<script>
+// Sample content for baby tips
+const categories = ["feeding","sleep","health","care","gifts"];
+const sampleProducts = [];
+categories.forEach(cat=>{
+    for(let i=1;i<=50;i++){
+        const productName = `${cat.charAt(0).toUpperCase() + cat.slice(1)} Tip ${i}`;
+        sampleProducts.push({ category: cat, product: productName, link:"#", price:"" });
+    }
+});
+
+const dealsGrid = document.getElementById("dealsGrid");
+const searchInput = document.getElementById("searchInput");
+const categoryChips = document.querySelectorAll(".chip");
+let activeCategory = "";
+let currentPage = 1;
+const ITEMS_PER_PAGE = 10;
+
+function renderDealsPage(deals, page=1){
+    dealsGrid.innerHTML = "";
+    const start = (page-1)*ITEMS_PER_PAGE;
+    const filteredDeals = deals.filter(d =>
+        (!activeCategory || d.category===activeCategory) &&
+        (!searchInput.value || d.product.toLowerCase().includes(searchInput.value.toLowerCase()))
+    );
+    const pagedDeals = filteredDeals.slice(start, start+ITEMS_PER_PAGE);
+    pagedDeals.forEach(d=>{
+        const div = document.createElement("div");
+        div.className = "deal";
+        div.innerHTML = `<div class="info">🎁 ${d.product}</div>
+                        <div class="actions">
+                          ${d.price ? `<div class="price">${d.price}</div>` : ""}
+                          <a class="btn primary" href="${d.link}" target="_blank">Read More</a>
+                        </div>`;
+        dealsGrid.appendChild(div);
+    });
+    renderPagination(filteredDeals);
+}
+
+function renderPagination(filteredDeals){
+    const pagination = document.getElementById("pagination");
+    pagination.innerHTML="";
+    const totalPages = Math.ceil(filteredDeals.length / ITEMS_PER_PAGE);
+    if(currentPage>1){
+        const prev = document.createElement("button");
+        prev.textContent="Previous";
+        prev.onclick=()=>{ currentPage--; renderDealsPage(sampleProducts,currentPage); };
+        pagination.appendChild(prev);
+    }
+    if(currentPage<totalPages){
+        const next = document.createElement("button");
+        next.textContent="Next";
+        next.onclick=()=>{ currentPage++; renderDealsPage(sampleProducts,currentPage); };
+        pagination.appendChild(next);
+    }
+}
+
+searchInput.addEventListener("input",()=>{ currentPage=1; renderDealsPage(sampleProducts,currentPage); });
+categoryChips.forEach(chip=>{
+    chip.addEventListener("click",()=>{
+        activeCategory = (activeCategory===chip.dataset.cat) ? "" : chip.dataset.cat;
+        currentPage=1;
+        renderDealsPage(sampleProducts,currentPage);
+    });
+});
+
+renderDealsPage(sampleProducts,currentPage);
+</script>
+
+</div>
+</body>
+</html>
