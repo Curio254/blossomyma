@@ -1,246 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BlossomyMa – all seasons baby care tips</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlossomyMa ‑ Winter & Christmas Baby Care Tips</title>
+<meta name="description" content="BlossomyMa shares warm, fun, and empathetic baby care tips, gift ideas, and essential advice for new mothers. Subscribe for daily updates!">
+<meta name="keywords" content="baby care, winter baby tips, Christmas baby tips, newborn advice, parenting tips, new mothers, baby gifts, infant care, hospital bag essentials, breastfeeding, sleep, health, first-time mom">
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Warm, empathetic guides for first-time moms: hospital bag essentials, breastfeeding tips, newborn sleep, feeding, health, winter care & Christmas gifts for babies.">
-  <meta name="keywords" content="hospital bag checklist, newborn essentials, breastfeeding guide, engorged breasts help, flat nipples breastfeeding, first time mom tips, baby feeding, newborn sleep tips, winter baby care, Christmas baby gifts">
-  <meta name="author" content="BlossomyMa">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GE4Z4MG063"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-GE4Z4MG063');
+</script>
 
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff7fb;
-      color: #333;
-    }
+<!-- Styles -->
+<style>
+:root {
+  --bg:#fff0f5; 
+  --card:#ffe6f8; 
+  --accent:#ff69b4; 
+  --btn:#ff1493; 
+  --radius:16px; 
+  --maxw:1200px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    header {
-      text-align: center;
-      padding: 25px 20px;
-      background: linear-gradient(135deg, #ffd0e6, #ffb6e6);
-      border-bottom: 2px solid #f7cdea;
-    }
+html, body {height:100%; margin:0; background:var(--bg);}
+body {display:flex; justify-content:center; padding:20px;}
+.site {
+  display:flex;
+  width:100%;
+  max-width:var(--maxw);
+  background:white;
+  border-radius:var(--radius);
+  box-shadow:0 6px 25px rgba(0,0,0,0.1);
+  padding:32px;
+  gap:24px;
+  flex-wrap:wrap;
+}
 
-    header img {
-      width: 180px;
-      height: auto;
-      margin-bottom: 10px;
-    }
+.main-content {flex:1; min-width:300px;}
+.sidebar {
+  width:300px;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  position:sticky;
+  top:20px;
+}
 
-    nav {
-      background: #ffe3f2;
-      padding: 12px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+header {display:flex; align-items:center; gap:16px; margin-bottom:20px; flex-wrap:wrap;}
+.logo {display:flex; align-items:center; gap:12px;}
+.logo-img {width:120px; max-width:100%; height:auto; object-fit:contain; border-radius:50%; border:2px solid var(--accent);}
+.logo div h1 {margin:0; font-size:32px; color:var(--accent);}
+p.lead {margin:2px 0 0; color:#555; font-size:16px; font-style:italic;}
 
-    nav a {
-      color: #b40059;
-      font-weight: bold;
-      text-decoration: none;
-      padding: 6px 14px;
-      border-radius: 25px;
-      background: #fff0f7;
-      border: 1px solid #ffb6d9;
-      font-size: 14px;
-      transition: 0.3s;
-    }
+nav {display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px;}
+.chip {padding:8px 14px; border-radius:50px; background:#ffe6f8; color:#ff1493; font-weight:600; cursor:pointer; transition:0.2s;}
+.chip:hover {background:#ffb6c1; color:white;}
 
-    nav a:hover {
-      background: #ffcce6;
-      border-color: #ff99cc;
-    }
+.grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:20px;}
+.card {background:#fff0f5; padding:20px; border-radius:var(--radius); box-shadow:0 4px 16px rgba(0,0,0,0.08); transition:0.3s;}
+.card:hover {box-shadow:0 8px 25px rgba(0,0,0,0.15); transform:translateY(-2px);}
+.card h2 {margin:0 0 10px; font-size:22px; color:var(--accent); display:flex; align-items:center; gap:8px;}
+.card h2::before {content:'❄️';}
 
-    section {
-      padding: 28px 25px;
-      margin: 20px;
-      background: #ffffff;
-      border-radius: 18px;
-      box-shadow: 0 4px 12px rgba(255, 182, 222, 0.25);
-      transition: 0.3s;
-    }
+footer {margin-top:24px; font-size:14px; color:#555; text-align:center;}
 
-    section:hover {
-      box-shadow: 0 6px 18px rgba(255, 182, 222, 0.35);
-    }
+.form-card {background:#ffe6f8; padding:20px; border-radius:var(--radius); box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+.form-card h2 {margin-top:0; color:#ff1493; font-size:20px; margin-bottom:12px;}
+.form-card input, .form-card textarea {width:100%; padding:10px; margin-bottom:10px; border-radius:8px; border:1px solid #ffb6c1; font-size:14px;}
+.form-card input[type="submit"] {background:var(--btn); color:white; border:none; cursor:pointer; transition:0.2s; font-weight:600;}
+.form-card input[type="submit"]:hover {background:#ff1493;}
+textarea {resize:vertical; min-height:80px;}
 
-    h2 {
-      color: #b40059;
-      margin-top: 0;
-    }
+.paypal-presets button {margin:0 4px 4px 0; padding:6px 12px; border-radius:6px; border:none; cursor:pointer; font-weight:600; background:#ff69b4; color:white; transition:0.2s;}
+.paypal-presets button:hover {background:#ff1493;}
+.paypal-amount {width:80px; padding:6px; border-radius:6px; border:1px solid #ffb6c1; margin-top:5px;}
 
-    .pdf-box {
-      background: #ffe6f4;
-      padding: 18px;
-      border-radius: 14px;
-      margin-top: 20px;
-      text-align: center;
-      border: 1px solid #ffb6d9;
-    }
-
-    .paypal-button {
-      display: inline-block;
-      background: linear-gradient(135deg, #ff91c1, #ff6fa8);
-      color: white;
-      padding: 12px 20px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 10px;
-      margin-top: 12px;
-      transition: 0.3s;
-    }
-
-    .paypal-button:hover {
-      background: linear-gradient(135deg, #ff6fa8, #e55892);
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 12px;
-      border: 1px solid #ffb6d9;
-      background: #fff0f7;
-    }
-
-    form button {
-      background: linear-gradient(135deg, #ff91c1, #ff6fa8);
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    form button:hover {
-      background: linear-gradient(135deg, #ff6fa8, #e55892);
-    }
-
-    footer {
-      text-align: center;
-      padding: 28px 20px;
-      color: #b40059;
-      font-size: 15px;
-      background: #ffe3f2;
-    }
-  </style>
+@media(max-width:992px){
+  .site {flex-direction:column;}
+  .sidebar {width:100%; position:relative; top:0;}
+}
+</style>
 </head>
-
 <body>
+<div class="site">
 
-<header>
-  <img src="blossomyma-logo.png" alt="BlossomyMa Logo">
-  <h1>BlossomyMa – all seasons baby care tips 💗</h1>
-</header>
+  <!-- Main Content -->
+  <div class="main-content">
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="BlossomyMa Logo" class="logo-img">
+        <div>
+          <h1>BlossomyMa</h1>
+          <p class="lead">Winter & Christmas Baby Care Tips</p>
+        </div>
+      </div>
+    </header>
 
-<nav>
-  <a href="#hospital">Hospital Bag Essentials</a>
-  <a href="#feeding">Feeding</a>
-  <a href="#sleep">Sleep</a>
-  <a href="#health">Health</a>
-  <a href="#winter">Winter Care</a>
-  <a href="#gifts">Christmas Gifts</a>
-  <a href="#ask">Ask a Question</a>
-</nav>
+    <nav id="categories">
+      <div class="chip" data-cat="hospital-bag">Hospital Bag Essentials & Prep</div>
+      <div class="chip" data-cat="feeding">Feeding</div>
+      <div class="chip" data-cat="sleep">Sleep</div>
+      <div class="chip" data-cat="health">Health</div>
+      <div class="chip" data-cat="winter-care">Winter Care</div>
+      <div class="chip" data-cat="christmas-gifts">Christmas Gifts</div>
+    </nav>
 
-<section id="hospital">
-  <h2>✨ Hospital Bag Essentials & Prep</h2>
-  <p>Warm, friendly content will be placed here later when you're ready. 💗</p>
+    <div class="grid" id="dealsGrid">
+      <!-- Hospital Bag -->
+      <section id="hospital-bag" class="card">
+        <h2>Hospital Bag Essentials & Prep</h2>
+        <p>Yay! Your bundle of joy is arriving soon! Packing your hospital bag can be fun. Here’s a lively teaser:</p>
+        <ul>
+          <li>Comfy outfits for mom – soft robes, slippers, cozy socks!</li>
+          <li>Toiletries & pampering items – face wipes, lip balm, mini lotion</li>
+          <li>Important docs – ID, insurance, birth plan</li>
+          <li>Baby essentials – onesies, swaddles, diapers, cute hats!</li>
+          <li>Optional fun extras – camera, snacks, charger, playlist for labor</li>
+          <li><strong>Tip:</strong> Adult diapers are medically okay for temporary postpartum incontinence – your body will bounce back soon!</li>
+        </ul>
+        <p>If you loved this, download the full <strong>PDF guide</strong> for just $1: <a href="hospital-bag-guide.pdf" target="_blank">Get PDF</a>.</p>
+        <p>Have questions? <a href="https://blossomyma.us11.list-manage.com/subscribe/post?u=760f96232f0016bda6c19cd6e&amp;id=f47b15011e" target="_blank">Ask here</a>!</p>
+      </section>
 
-  <div class="pdf-box">
-    <p><strong>Enjoyed this guide, mama?</strong>  
-    You can download the full, beautifully designed PDF for only **$1**.  
-    This tiny contribution helps us maintain this warm space for all moms. 💞</p>
+      <!-- Feeding -->
+      <section id="feeding" class="card">
+        <h2>Feeding Tips</h2>
+        <p>Breastfeeding can be tricky, but we’re here to cheer you on! Teaser tips:</p>
+        <ul>
+          <li>Softening engorged breasts before feeding helps a comfy latch</li>
+          <li>Warm compresses & gentle stimulation improve milk flow</li>
+          <li>Deep latch techniques make feeding smoother</li>
+          <li>Hydration & healthy diet help boost milk naturally</li>
+        </ul>
+        <p>Download the full <strong>Feeding PDF guide</strong> for $1: <a href="feeding-guide.pdf" target="_blank">Get PDF</a>.</p>
+      </section>
 
-    <a class="paypal-button" href="https://www.paypal.com/donate?business=evakihonge@gmail.com&amount=1&currency_code=USD">
-      Download Full “Hospital Bag Essentials” Guide – $1
-    </a>
+      <!-- Sleep -->
+      <section id="sleep" class="card">
+        <h2>Sleep Tips</h2>
+        <p>Discover fun ways to help your baby snooze safely and soundly. Teaser content:</p>
+        <ul>
+          <li>Establish a bedtime routine with soothing songs</li>
+          <li>Keep room temperature comfy – not too hot or cold</li>
+          <li>Swaddle baby snugly but safely</li>
+          <li>Encourage daytime naps for happy nights</li>
+        </ul>
+        <p>Download the full <strong>Sleep PDF guide</strong> for $1: <a href="sleep-guide.pdf" target="_blank">Get PDF</a>.</p>
+      </section>
+
+      <!-- Health -->
+      <section id="health" class="card">
+        <h2>Health Tips</h2>
+        <ul>
+          <li>Monitor postpartum recovery & consult doctors</li>
+          <li>Ensure baby gets scheduled vaccinations</li>
+          <li>Support your mental health</li>
+          <li>Maintain hydration & nutritious diet</li>
+        </ul>
+        <p>Download the full <strong>Health PDF guide</strong> for $1: <a href="health-guide.pdf" target="_blank">Get PDF</a>.</p>
+      </section>
+
+      <!-- Winter Care -->
+      <section id="winter-care" class="card">
+        <h2>Winter Care Tips</h2>
+        <ul>
+          <li>Dress baby in layers and soft fabrics</li>
+          <li>Protect skin from dry winter air</li>
+          <li>Warm baths & gentle moisturizers</li>
+          <li>Keep rooms comfortably heated</li>
+        </ul>
+        <p>Download full <strong>Winter Care PDF guide</strong> for $1: <a href="winter-care-guide.pdf" target="_blank">Get PDF</a>.</p>
+      </section>
+
+      <!-- Christmas Gifts -->
+      <section id="christmas-gifts" class="card">
+        <h2>Christmas Gift Ideas</h2>
+        <ul>
+          <li>Soft toys & educational gifts</li>
+          <li>Festive clothing & cute accessories</li>
+          <li>Books & sensory toys</li>
+          <li>Baby-safe stocking stuffers</li>
+        </ul>
+        <p>Download full <strong>Christmas Gifts PDF guide</strong> for $1: <a href="christmas-gifts-guide.pdf" target="_blank">Get PDF</a>.</p>
+      </section>
+
+    </div>
   </div>
-</section>
 
-<section id="feeding">
-  <h2>🍼 Feeding Guide</h2>
-  <p>Full article will go here later...</p>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Mailchimp Newsletter -->
+    <div class="form-card">
+      <h2>Subscribe for Baby Tips & Updates</h2>
+      <form action="https://blossomyma.us11.list-manage.com/subscribe/post?u=760f96232f0016bda6c19cd6e&amp;id=f47b15011e" method="post" target="_blank">
+        <input type="email" name="EMAIL" placeholder="Your email address" required>
+        <input type="submit" value="Subscribe">
+      </form>
+    </div>
 
-  <div class="pdf-box">
-    <a class="paypal-button" href="https://www.paypal.com/donate?business=evakihonge@gmail.com&amount=1&currency_code=USD">
-      Download Full Feeding Guide – $1
-    </a>
+    <!-- Formspree Feedback -->
+    <div class="form-card">
+      <h2>Send Us Your Feedback</h2>
+      <form action="https://formspree.io/f/xjkjokor" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Feedback">
+      </form>
+    </div>
+
+    <!-- PayPal Donation -->
+    <div class="form-card">
+      <p style="font-weight:600;color:#ff1493;margin-bottom:10px;">Support BlossomyMa via PayPal</p>
+      <div class="paypal-presets">
+        <button onclick="setAmount(5)">Donate $5</button>
+        <button onclick="setAmount(10)">Donate $10</button>
+        <button onclick="setAmount(20)">Donate $20</button>
+      </div>
+      <input type="number" id="donationAmount" class="paypal-amount" min="1" value="5">
+      <div id="paypal-button-container"></div>
+    </div>
   </div>
-</section>
 
-<section id="sleep">
-  <h2>😴 Newborn Sleep Guide</h2>
-  <p>Full article will go here later...</p>
-
-  <div class="pdf-box">
-    <a class="paypal-button" href="https://www.paypal.com/donate?business=evakihonge@gmail.com&amount=1&currency_code=USD">
-      Download Full Sleep Guide – $1
-    </a>
-  </div>
-</section>
-
-<section id="health">
-  <h2>💗 Baby Health Guide</h2>
-  <p>Full article will go here...</p>
-
-  <div class="pdf-box">
-    <a class="paypal-button" href="https://www.paypal.com/donate?business=evakihonge@gmail.com&amount=1&currency_code=USD">
-      Download Full Health Guide – $1
-    </a>
-  </div>
-</section>
-
-<section id="winter">
-  <h2>❄️ Winter Care Guide</h2>
-  <p>Full article will go here...</p>
-
-  <div class="pdf-box">
-    <a class="paypal-button" href="https://www.paypal.com/donate?business=evakihonge@gmail.com&amount=1&currency_code=USD">
-      Download Full Winter Care Guide – $1
-    </a>
-  </div>
-</section>
-
-<section id="gifts">
-  <h2>🎄 Christmas Gifts Guide</h2>
-  <p>Full article will go here...</p>
-
-  <div class="pdf-box">
-    <a class="paypal-button" href="https://www.paypal.com/donate?business=evakihonge@gmail.com&amount=1&currency_code=USD">
-      Download Full Christmas Gifts Guide – $1
-    </a>
-  </div>
-</section>
-
-<section id="ask">
-  <h2>💞 Friendly & Sisterly Support</h2>
-  <p><strong>Hey mama! Got a question? A doubt? Something you’d rather ask quietly?</strong><br>
-  You can send it right here — no judgment, no pressure,  
-  just warm support from someone who truly understands. 💞<br><br>
-  <strong>Ask anything — we’re listening.</strong></p>
-
-  <form action="https://formspree.io/f/xjkjokor" method="POST">
-    <input type="text" name="name" placeholder="Your Name (optional)">
-    <input type="email" name="email" placeholder="Your Email (optional)">
-    <textarea name="message" placeholder="Write your question here..." rows="5" required></textarea>
-    <button type="submit">Send Your Question 💗</button>
-  </form>
-</section>
+</div>
 
 <footer>
-  © 2025 BlossomyMa – Made with love for all moms 💗
+  <div>BlossomyMa shares baby care tips and ideas. Affiliate links and donations help us keep content free.</div>
+  <div style="margin-top:8px;font-size:13px;color:#444">
+    <strong>Links:</strong> 
+    <a href="/affiliatedisclosure.html">Affiliate Disclosure</a> | 
+    <a href="/privacy.html">Privacy Policy</a> | 
+    <a href="/terms.html">Terms & Conditions</a> | 
+    <a href="/disclaimer.html">Disclaimer</a> | 
+    <a href="/contact.html">Contact Us</a>
+  </div>
 </footer>
+
+<!-- PayPal SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=AZXqUORsfzvKK9Rr3kVxdiAEiF9MFV2Mu9bWqgnCIAyrVER8-6tkl8SFMWSmQCoQgcCeQu0342mtFNNW&currency=USD"></script>
+<script>
+function setAmount(value){ document.getElementById('donationAmount').value = value; }
+paypal.Buttons({
+    style: { layout: 'horizontal', color: 'gold', shape: 'pill', label: 'donate', height:40 },
+    createOrder: function(data, actions){
+        const amount = document.getElementById('donationAmount').value;
+        return actions.order.create({ purchase_units:[{ amount:{ value: amount }}]});
+    },
+    onApprove: function(data, actions){
+        return actions.order.capture().then(function(details){
+            alert('Thank you for your donation, '+details.payer.name.given_name+'!');
+        });
+    }
+}).render('#paypal-button-container');
+</script>
 
 </body>
 </html>
