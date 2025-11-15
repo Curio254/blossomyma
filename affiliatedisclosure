@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Affiliate Disclosure – BlossomyMa</title>
+<style>
+body{font-family:Arial,sans-serif;background:#fffafc;color:#333;padding:20px;max-width:900px;margin:auto;}
+h1,h2{color:#ff69b4;}
+a{color:#ff1493;text-decoration:none;}
+a:hover{text-decoration:underline;}
+</style>
+</head>
+<body>
+<h1>Affiliate Disclosure</h1>
+<p>BlossomyMa participates in affiliate programs and may earn commissions from purchases made through links on this website. This includes links to products, services, or promotions.</p>
+<p>We only recommend products we trust and believe will benefit our readers. Your support through these links helps us maintain free content and daily baby care tips.</p>
+<h2>Compliance</h2>
+<ul>
+<li>USA: This disclosure complies with the <strong>Federal Trade Commission (FTC)</strong> guidelines.</li>
+<li>Canada: We comply with the <strong>Competition Bureau’s disclosure requirements</strong>.</li>
+<li>Europe: Affiliate links comply with <strong>EU consumer protection directives</strong>.</li>
+</ul>
+<p>For questions, contact us at <a href="mailto:info@blossomyma.com">info@blossomyma.com</a>.</p>
+</body>
+</html>
