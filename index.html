@@ -189,7 +189,7 @@
             transform: translateY(20px);
             animation: fadeIn 0.6s forwards;
             margin-bottom: 10px;
-            min-height: 250px; /* Ensures visual consistency */
+            min-height: 250px; 
         }
 
         .card h2 {
@@ -217,11 +217,11 @@
         /* --- FOOTER SPACING OPTIMIZATION --- */
         .feedback-donate {
             background: var(--light-gray-bg);
-            padding: 30px; /* Reduced padding */
+            padding: 30px; 
             border-radius: var(--radius);
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px; /* Increased gap slightly */
+            gap: 30px; 
             margin-bottom: 20px;
         }
 
@@ -238,7 +238,7 @@
             border-radius: 8px;
             border: 1px solid #ccc;
             margin-bottom: 10px;
-            box-sizing: border-box; /* Important for full width inputs */
+            box-sizing: border-box; 
         }
 
         .feedback-form input[type="submit"] {
@@ -259,7 +259,7 @@
             flex-wrap: wrap; 
             align-items: center; 
             gap: 8px; 
-            padding-top: 10px; /* Vertical spacing adjustment */
+            padding-top: 10px; 
         }
 
         .donate h3 {
@@ -328,7 +328,7 @@
                 margin: 10px auto;
             }
             .hero, .feedback-donate {
-                display: block; /* Stacks columns on small screens */
+                display: block; 
             }
         }
     </style>
@@ -370,10 +370,7 @@
             <p style="font-size: 18px; color: var(--dark-text); max-width: 800px; margin: 0 auto 20px;">
                 Download the **Complete Winter & Christmas Baby Care Bundle** now for just **$4.99**. Get all 6 in-depth guides (100+ tips, checklists, and recommended products) compiled into one beautiful, printable PDF guide.
             </p>
-            <a href="YOUR_BUNDLE_PAYMENT_LINK_HERE" class="button">Download Full Bundle Now - $4.99</a>
-            <p style="font-size: 12px; color: var(--light-text); margin-top: 15px;">
-                *(Ready for monetization: We'll link to top-rated products here soon!)*
-            </p>
+            <a href="YOUR_FINAL_PAYPAL_CHECKOUT_URL_HERE" class="button">Download Full Bundle Now - $4.99</a>
         </div>
         
         <div class="grid">
@@ -499,6 +496,7 @@
                 });
             },
             onApprove: function(data, actions) {
+                // This alert happens, but the redirect must be configured in PayPal settings!
                 return actions.order.capture().then(function(details) {
                     alert('Thank you for your donation, ' + details.payer.name.given_name + '!');
                 });
@@ -515,7 +513,6 @@
             document.getElementById('backToTop').style.display = (window.scrollY > 300) ? 'block' : 'none';
         };
 
-        // Animation for card fading
         document.addEventListener('DOMContentLoaded', () => {
             const cards = document.querySelectorAll('.card');
             cards.forEach((card, index) => {
