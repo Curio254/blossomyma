@@ -53,6 +53,7 @@ header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; fle
 .hero-form input[type="email"] { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 10px; }
 .hero-form input[type="submit"] { width: 100%; padding: 12px; border-radius: 8px; border: none; background: var(--dusty-rose); color: white; font-weight: 600; cursor: pointer; transition: 0.2s; }
 .hero-form input[type="submit"]:hover { background: #c87c91; }
+.hero img { max-width: 100%; border-radius: var(--radius); margin-top: 20px; }
 
 /* Monetization CTA */
 .monetization-cta a.button { padding: 15px 30px; font-size: 18px; background: var(--dusty-rose); text-decoration: none; color: white; border-radius: 8px; display: inline-block; font-weight: 700; transition: 0.2s; }
@@ -86,13 +87,7 @@ header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; fle
 .feedback-form input[type="submit"] { background: var(--dusty-rose); color: white; border: none; font-weight: 600; cursor: pointer; transition: 0.2s; }
 .feedback-form input[type="submit"]:hover { background: #c87c91; }
 
-.donate {
-  display: flex;
-  flex-wrap: wrap; /* Allows wrapping on small screens */
-  align-items: center; /* Vertically aligns buttons and input */
-  gap: 10px; /* Slightly increased gap for visual clarity */
-  padding-top: 10px;
-}
+.donate { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding-top: 10px; }
 .donate h3 { width: 100%; margin-top: 0; margin-bottom: 12px; font-size: 18px; color: var(--dark-text); }
 .donate button { margin: 0; padding: 8px 14px; background: var(--dusty-rose); color: white; border: none; border-radius: 8px; cursor: pointer; transition: 0.2s; }
 .donate button:hover { background: #c87c91; }
@@ -101,6 +96,7 @@ header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; fle
 
 /* Footer & Back-to-Top */
 footer { text-align: center; color: var(--light-text); font-size: 14px; margin-top: 20px; padding-top: 10px; border-top: 1px solid #ddd; }
+
 #backToTop { position: fixed; bottom: 30px; right: 30px; background: var(--dusty-rose); color: white; padding: 10px 14px; border-radius: 50%; font-weight: bold; cursor: pointer; display: none; z-index: 1000; }
 
 @media (max-width: 600px) { .site { padding: 15px; margin: 10px auto; } .hero, .feedback-donate { display: block; } }
@@ -137,6 +133,7 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
 <input type="email" name="EMAIL" placeholder="Your email address" required>
 <input type="submit" value="Subscribe">
 </form>
+<img src="mom_newbornimage.png" alt="Mom with Newborn" style="margin-top:15px; border-radius:12px; max-width:100%;">
 </div>
 </div>
 
@@ -148,6 +145,9 @@ Download the <strong>Ultimate Winter Maternity & Newborn Hospital Prep Bundle</s
 </p>
 <a href="https://payhip.com/b/B3JNc" class="button">Download Bundle Now - $9.99</a>
 </div>
+
+<!-- Bundle Link on Top -->
+<p style="text-align:center; margin-bottom:20px;"><a href="https://payhip.com/b/B3JNc" class="button">Get Your Winter Bundle Now - $9.99</a></p>
 
 <!-- Cards Grid -->
 <div class="grid">
@@ -181,7 +181,7 @@ Download the <strong>Ultimate Winter Maternity & Newborn Hospital Prep Bundle</s
 <a href="https://payhip.com/b/qjQkY" class="button">Download the Winter Bloom Guide - $9.99</a>
 </section>
 
-<!-- Placeholder Cards -->
+<!-- Cards 3–6 remain unchanged -->
 <section id="sleep" class="card">
 <h2>💤 Sleep Tips</h2>
 <p>Safe and restful sleep is key. Discover swaddling techniques, optimal room temperatures, and soothing routines.</p>
@@ -225,7 +225,6 @@ Download the <strong>Ultimate Winter Maternity & Newborn Hospital Prep Bundle</s
 </ul>
 <a class="button">Download Bundle</a>
 </section>
-</div>
 
 <!-- Feedback & Donate -->
 <div class="feedback-donate">
@@ -253,4 +252,46 @@ Download the <strong>Ultimate Winter Maternity & Newborn Hospital Prep Bundle</s
 <footer>
 <div>© 2025 BlossomyMa. All Rights Reserved.</div>
 <div style="margin-top:8px;">
-<a href="affiliatedisclosure.html
+<a href="affiliatedisclosure.html">Affiliate Disclosure</a> | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="terms.html">Terms & Conditions</a> | 
+<a href="disclaimer.html">Disclaimer</a> | 
+<a href="contact.html">Contact Us</a>
+</div>
+</footer>
+
+</div>
+
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_EXISTING_CLIENT_ID&currency=USD"></script>
+<script>
+paypal.Buttons({
+    createOrder: function(data, actions) {
+        var amount = document.getElementById('donationAmount').value || '5';
+        return actions.order.create({
+            purchase_units: [{ amount: { value: amount } }]
+        });
+    },
+    onApprove: function(data, actions) {
+        return actions.order.capture().then(function(details) {
+            alert('Donation completed by ' + details.payer.name.given_name + '!');
+        });
+    }
+}).render('#paypal-button-container');
+
+// Read More / Read Less
+document.querySelectorAll('.read-more-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var content = btn.previousElementSibling;
+    if(content.style.maxHeight && content.style.maxHeight !== '0px'){
+      content.style.maxHeight = '0';
+      btn.textContent = 'Read More';
+    } else {
+      content.style.maxHeight = content.scrollHeight + 'px';
+      btn.textContent = 'Read Less';
+    }
+  });
+});
+</script>
+
+</body>
+</html>
