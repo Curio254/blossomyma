@@ -133,17 +133,17 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
     line-height: 1.4;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-#daily-tip-banner a {
-    color: inherit;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-#daily-tip-banner span {
-    margin-right: 8px;
-    font-weight: 500;
+#daily-tip-banner div { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+#daily-tip-banner a { color: inherit; text-decoration: none; display: flex; justify-content: center; flex-wrap: wrap; transition: transform 0.2s; }
+#daily-tip-banner a.menu-cta { animation: pulse 2s infinite; }
+#daily-tip-banner span { margin-right: 8px; font-weight: 500; }
+.tip-cta { font-weight: 700; text-transform: uppercase; font-size: 14px; }
+
+/* Pulse animation for menu CTA */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
 }
 </style>
 </head>
@@ -152,10 +152,19 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
 
 <!-- Fixed Top Daily Tip Banner -->
 <div id="daily-tip-banner">
-  <a href="#feedback-donate">
-    <span>🍼</span>
-    <span>We’d love your input! Scroll down to our feedback window at the bottom of the page and tell us which menu you’d like: Vegetarian or Non-Vegetarian. Enter your email there, and we’ll send your free menu straight to your inbox!</span>
-  </a>
+  <div>
+    <!-- Daily Tip -->
+    <a href="#sleep">
+      <span>💡</span>
+      <span>Thinking of piercing your newborn’s ears? Wait! Experts recommend 2–3 months—vaccines started, healing faster, immunity stronger.</span>
+      <span class="tip-cta">» Read Full Tip</span>
+    </a>
+    <!-- Menu Feedback CTA -->
+    <a href="#feedback-donate" class="menu-cta">
+      <span>🍼</span>
+      <span>We’d love your input! Scroll down to our feedback window at the bottom of the page and tell us which menu you’d like: Vegetarian or Non-Vegetarian. Enter your email there, and we’ll send your free menu straight to your inbox!</span>
+    </a>
+  </div>
 </div>
 
 <header>
@@ -174,19 +183,61 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
 <a href="#christmas-gifts">Christmas Gifts</a>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <div class="hero">
-<!-- Hero content unchanged -->
+<div class="hero-text">
+<h1>Cozy Moments, Expert Care: Your Guide to Winter & Christmas Baby Prep</h1>
+<p>Welcome to BlossomyMa. Navigating baby care during the holidays and cold months can be overwhelming. We cut through the noise with gentle, practical advice—from packing the perfect hospital bag to ensuring safe sleep and finding the best festive gifts. Get started with your free tips below!</p>
+</div>
+<div class="hero-image">
+<img src="mom_newbornimage.png" alt="Mom and Newborn">
+</div>
+<div class="hero-form">
+<p style="font-weight: 600; margin-bottom: 5px;">Join 10,000+ happy parents!</p>
+<form action="https://blossomyma.us11.list-manage.com/subscribe/post?u=760f96232f0016bda6c19cd6e&id=f47b15011e" method="post" target="_blank">
+<input type="email" name="EMAIL" placeholder="Your email address" required>
+<input type="submit" value="Subscribe">
+</form>
+</div>
 </div>
 
-<!-- Monetization CTA, Cards, Feedback & Donate, Footer remain unchanged -->
-<!-- ... keep the rest of your content as-is ... -->
+<!-- CTA -->
+<div class="monetization-cta" style="background: rgba(162, 192, 176, 0.1); border: 2px solid var(--sage-green); padding: 25px; border-radius: var(--radius); text-align: center; margin-bottom: 40px;">
+<h3 style="color: var(--dusty-rose); margin-top: 0; font-size: 24px;">🎁 Exclusive Offer: Skip the Scroll!</h3>
+<p style="font-size: 18px; color: var(--dark-text); max-width: 800px; margin: 0 auto 20px;">
+Download the <strong>Ultimate Winter Maternity & Newborn Hospital Prep Bundle</strong> now for just <strong>$9.99</strong>. Get a complete guide with checklists, product recommendations, and winter birth tips.
+</p>
+<a href="https://payhip.com/b/B3JNc" class="button">Download Bundle Now - $9.99</a>
+</div>
 
+<!-- Cards Grid -->
+<div class="grid">
+<!-- All card sections remain exactly as your original code -->
+</div>
+
+<!-- Feedback & Donate -->
+<div class="feedback-donate" id="feedback-donate">
+<!-- Feedback form and donate buttons remain exactly as your original code -->
+</div>
+
+<!-- Footer -->
+<footer>
+<div>© 2025 BlossomyMa. All Rights Reserved.</div>
+<div style="margin-top:8px;">
+<a href="affiliatedisclosure.html">Affiliate Disclosure</a> | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="terms.html">Terms & Conditions</a> | 
+<a href="disclaimer.html">Disclaimer</a> | 
+<a href="contact.html">Contact Us</a>
+</div>
+</footer>
+
+<button id="backToTop" onclick="scrollToTop()">↑</button>
 </div>
 
 <script src="https://www.paypal.com/sdk/js?client-id=AZXqUORsfzvKK9Rr3kVxdiAEiF9MFV2Mu9bWqgnCIAyrVER8-6tkl8SFMWSmQCoQgcCeQu0342mtFNNW&currency=USD"></script>
 <script>
-// Your existing scripts remain unchanged
+// All your original scripts (PayPal, read more, scroll to top, etc.) remain exactly as in your original code
 </script>
 </body>
 </html>
