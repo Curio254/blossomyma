@@ -246,4 +246,54 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
 <div id="backToTop" onclick="scrollToTop()">↑</div>
 </div>
 
-<script src="https://www.paypal.com/sdk/js?client-id=AZXqUORsfzvKK9Rr3
+<script src="https://www.paypal.com/sdk/js?client-id=AZXqUORsfzvKK9Rr3H8YW_uF8g7hPrY0mM1S1JEN4i2FSQvKcwOqjv_zT9S3DsY4BxXPTmrz0k8_zcO&currency=USD"></script>
+
+<script>
+function toggleReadMore(id, btn){
+  var el = document.getElementById(id);
+  if(el.style.whiteSpace === "normal"){
+    el.style.whiteSpace = "nowrap";
+    el.style.overflow = "hidden";
+    el.style.textOverflow = "ellipsis";
+    btn.textContent = "Read More";
+  } else {
+    el.style.whiteSpace = "normal";
+    el.style.overflow = "visible";
+    el.style.textOverflow = "clip";
+    btn.textContent = "Read Less";
+  }
+}
+
+function scrollToTop(){ window.scrollTo({top:0, behavior:'smooth'}); }
+
+window.addEventListener('scroll', function(){
+  var btn = document.getElementById('backToTop');
+  if(window.scrollY > 300){ btn.style.display = 'block'; } else { btn.style.display = 'none'; }
+});
+
+function setAmount(amount){
+  document.getElementById('donationAmount').value = amount;
+}
+
+paypal.Buttons({
+  style: { layout: 'vertical', color: 'rose', shape: 'rect', label: 'donate' },
+  createOrder: function(data, actions){
+    var donation = document.getElementById('donationAmount').value;
+    return actions.order.create({ purchase_units: [{ amount: { value: donation } }] });
+  },
+  onApprove: function(data, actions){ return actions.order.capture().then(function(details){ alert('Donation Completed! Thank you, ' + details.payer.name.given_name); }); }
+}).render('#paypal-button-container');
+
+document.addEventListener("DOMContentLoaded", function(){
+  var readMoreEls = document.querySelectorAll(".read-more-btn");
+  readMoreEls.forEach(function(btn){
+    var card = btn.previousElementSibling;
+    card.style.whiteSpace = "nowrap";
+    card.style.overflow = "hidden";
+    card.style.textOverflow = "ellipsis";
+  });
+});
+</script>
+
+</body>
+</html>
