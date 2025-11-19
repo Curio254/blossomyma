@@ -31,7 +31,7 @@ gtag('config', 'G-GE4Z4MG063');
   font-family: 'Poppins', sans-serif;
 }
 
-html, body { margin: 0; padding: 0; background: var(--light-gray-bg); color: var(--dark-text); padding-top: 60px; } /* padding for top banner */
+html, body { margin: 0; padding: 0; background: var(--light-gray-bg); color: var(--dark-text); padding-top: 60px; }
 a { color: var(--dusty-rose); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -124,7 +124,8 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
     left: 0;
     width: 100%;
     z-index: 9999;
-    color: #000000; /* text always black */
+    background-color: var(--dusty-rose);
+    color: black; /* always black */
     text-align: center;
     padding: 12px 10px;
     font-family: 'Poppins', sans-serif;
@@ -132,7 +133,7 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
 }
 #daily-tip-banner a { color: inherit; text-decoration: none; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; }
 #daily-tip-banner span { margin-right: 8px; font-weight: 500; }
-#daily-tip-banner span.tip-cta { font-weight: 700; text-transform: uppercase; color: #8C5E78; font-size: 14px; }
+#daily-tip-banner span.tip-cta { font-weight: 700; text-transform: uppercase; font-size: 14px; }
 </style>
 </head>
 <body>
@@ -140,9 +141,9 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
 
 <!-- Fixed Top Daily Tip Banner -->
 <div id="daily-tip-banner">
-<a href="/daily-wisdom-page">
+<a href="#sleep">
 <span>💡</span>
-<span id="daily-tip-text">Thinking of piercing your newborn’s ears? Wait! Experts recommend 2–3 months—vaccines started, healing faster, immunity stronger.</span>
+<span>Thinking of piercing your newborn’s ears? Wait! Experts recommend 2–3 months—vaccines started, healing faster, immunity stronger.</span>
 <span class="tip-cta">» Read Full Tip</span>
 </a>
 </div>
@@ -306,7 +307,9 @@ Download the <strong>Ultimate Winter Maternity & Newborn Hospital Prep Bundle</s
 
 <script src="https://www.paypal.com/sdk/js?client-id=AZXqUORsfzvKK9Rr3kVxdiAEiF9MFV2Mu9bWqgnCIAyrVER8-6tkl8SFMWSmQCoQgcCeQu0342mtFNNW&currency=USD"></script>
 <script>
-function setAmount(value) { document.getElementById('donationAmount').value = value; }
+function setAmount(value) {
+    document.getElementById('donationAmount').value = value;
+}
 
 paypal.Buttons({
     style: { layout: 'horizontal', color: 'gold', shape: 'pill', label: 'donate', height: 40 },
@@ -337,28 +340,22 @@ document.querySelectorAll('.read-more-btn').forEach(btn => {
 function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 window.addEventListener('scroll', () => {
     const btn = document.getElementById('backToTop');
-    btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    if (window.scrollY > 300) btn.style.display = 'block';
+    else btn.style.display = 'none';
 });
 
-// Rotating Daily Tips
-const tips = [
-    "Thinking of piercing your newborn’s ears? Wait! Experts recommend 2–3 months—vaccines started, healing faster, immunity stronger.",
-    "Winter baby skin can dry quickly. Use fragrance-free moisturizers daily for delicate skin.",
-    "Ensure your newborn’s room is humidified in winter to prevent congestion and dry nasal passages.",
-    "Layer baby’s sleepwear in winter: base layer, sleep sack, and light blanket if needed."
-];
-let tipIndex = 0;
-function rotateTip() {
-    document.getElementById('daily-tip-text').textContent = tips[tipIndex];
-    tipIndex = (tipIndex + 1) % tips.length;
-}
-setInterval(rotateTip, 8000); // every 8s
-
-// Daily Rotating Banner Background
-const bannerColors = ["#FCE4EC","#FFF3E0","#E3F2FD","#E8F5E9","#F3E5F5","#FFFDE7"];
-const today = new Date();
-const colorIndex = today.getDate() % bannerColors.length;
-document.getElementById('daily-tip-banner').style.backgroundColor = bannerColors[colorIndex];
+// Scroll to Card 3 and flash
+document.querySelectorAll('#daily-tip-banner a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector('#sleep');
+    target.scrollIntoView({ behavior: 'smooth' });
+    target.style.transition = 'background-color 0.5s';
+    const originalBg = target.style.backgroundColor;
+    target.style.backgroundColor = '#FFFACD'; // flash light yellow
+    setTimeout(() => { target.style.backgroundColor = originalBg || ''; }, 1000);
+  });
+});
 </script>
 </body>
 </html>
