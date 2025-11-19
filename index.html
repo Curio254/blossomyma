@@ -15,6 +15,7 @@
         padding: 0;
         background: #f5f9ff;
         color: #333;
+        padding-top: 60px; /* Space for fixed banner */
     }
 
     header {
@@ -29,6 +30,45 @@
     header p {
         font-size: 1.1rem;
         color: #555;
+    }
+
+    /* ===== Daily Tip Fixed Top Banner ===== */
+    #daily-tip-banner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        background-color: #E8C9D0;
+        color: #4A4A4A;
+        text-align: center;
+        padding: 12px 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        font-size: 16px;
+        line-height: 1.2;
+        font-family: 'Georgia', serif;
+    }
+    #daily-tip-banner a {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .tip-emoji {
+        font-size: 18px;
+        margin-right: 8px;
+    }
+    .tip-text {
+        font-weight: 500;
+        margin-right: 15px;
+    }
+    .tip-cta {
+        font-weight: 700;
+        color: #8C5E78;
+        text-transform: uppercase;
+        font-size: 14px;
     }
 
     /* Floating Pinterest Box */
@@ -88,7 +128,11 @@
         margin-bottom: 12px;
         color: #1f3b57;
     }
-
+    .card p {
+        font-size: 0.95rem;
+        color: #444;
+        margin-bottom: 10px;
+    }
     .card a {
         display: inline-block;
         background: #3a6ea5;
@@ -100,7 +144,6 @@
         font-size: 0.95rem;
         transition: 0.2s;
     }
-
     .card a:hover {
         background: #274c75;
     }
@@ -120,6 +163,15 @@
 </head>
 
 <body>
+
+<!-- FIXED TOP DAILY TIP BANNER -->
+<div id="daily-tip-banner">
+    <a href="/daily-wisdom-page" title="Read today's expert parenting tip.">
+        <span class="tip-emoji">💡</span>
+        <span class="tip-text">Thinking of piercing your newborn’s ears? Wait! Experts recommend 2–3 months—vaccines started, healing faster, immunity stronger.</span>
+        <span class="tip-cta">» Read Full Tip</span>
+    </a>
+</div>
 
 <header>
     <h1>❄️ BlossomyMa Winter Baby Prep Collection</h1>
@@ -180,10 +232,12 @@ setDailyTip();
         <a href="https://payhip.com/b/yyyy">Download Now</a>
     </div>
 
-    <!-- Card 3 – Updated Title -->
+    <!-- Card 3 – Updated -->
     <div class="card">
+        <a href="https://payhip.com/b/G7eKz">🍼 Complete Sleep & Recovery System: Baby + Mom</a>
         <img src="sleep.jpg" alt="Sleep System" />
         <h3>Complete Sleep & Recovery System: Baby + Mom</h3>
+        <p>Transform nights with expert-approved newborn sleep techniques, gentle bedtime cues, and a maternal wellness schedule. Includes winter-safe sleep guidance, lactation-friendly meals, and postpartum recovery strategies. Grab your full winter sleep & recovery bundle now!</p>
         <a href="https://payhip.com/b/G7eKz">Get Bundle</a>
     </div>
 
