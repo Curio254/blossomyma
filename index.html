@@ -52,10 +52,10 @@ gtag('config', 'G-GE4Z4MG063');
   --maxw: 1200px;
   font-family: 'Poppins', sans-serif;
 }
-html, body { margin: 0; padding: 0; background: var(--light-gray-bg); color: var(--dark-text); }
+html, body { margin: 0; padding: 0; background: var(--light-gray-bg); color: var(--dark-text); overflow-x: hidden; }
 a { color: var(--dusty-rose); text-decoration: none; }
 a:hover { text-decoration: underline; }
-.site { max-width: var(--maxw); margin: 20px auto; background: var(--white); border-radius: var(--radius); padding: 32px; box-shadow: 0 6px 25px rgba(0,0,0,0.1); }
+.site { max-width: var(--maxw); margin: 20px auto; background: var(--white); border-radius: var(--radius); padding: 32px; box-shadow: 0 6px 25px rgba(0,0,0,0.1); overflow-x: hidden; }
 header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
 .logo .site-logo { max-height: 80px; width: auto; display: block; margin-bottom: 5px; }
 .logo p.lead { margin: 2px 0 0; color: var(--light-text); font-size: 16px; font-style: italic; }
@@ -67,7 +67,7 @@ header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; fle
 .hero-text h1 { font-size: 28px; color: var(--dusty-rose); }
 .hero-text p { font-size: 16px; color: var(--dark-text); }
 .hero-form { flex: 1; min-width: 280px; background: var(--light-gray-bg); padding: 20px; border-radius: var(--radius); }
-.hero-form input[type="email"] { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 10px; }
+.hero-form input[type="email"] { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 10px; box-sizing: border-box; }
 .hero-form input[type="submit"] { width: 100%; padding: 12px; border-radius: 8px; border: none; background: var(--dusty-rose); color: white; font-weight: 600; cursor: pointer; transition: 0.2s; }
 .hero-form input[type="submit"]:hover { background: #c87c91; }
 .monetization-cta a.button { padding: 15px 30px; font-size: 18px; background: var(--dusty-rose); text-decoration: none; color: white; border-radius: 8px; display: inline-block; font-weight: 700; transition: 0.2s; }
@@ -93,9 +93,12 @@ header { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; fle
 #paypal-button-container { margin-top: 10px; width: 100%; }
 footer { text-align: center; color: var(--light-text); font-size: 14px; margin-top: 20px; padding-top: 10px; border-top: 1px solid #ddd; }
 #backToTop { position: fixed; bottom: 30px; right: 30px; background: var(--dusty-rose); color: white; padding: 10px 14px; border-radius: 50%; font-weight: bold; cursor: pointer; display: none; z-index: 1000; }
-@media (max-width: 600px) { .site { padding: 15px; margin: 10px auto; } .hero, .feedback-donate { display: block; } }
-
-/* Individual card backgrounds */
+@media (max-width: 600px) { 
+  .site { padding: 15px; margin: 10px auto; overflow-x: hidden; } 
+  .hero, .feedback-donate { display: block; } 
+  .hero-text h1 { font-size: 24px; }
+  .hero-text p { font-size: 14px; }
+}
 #hospital-bag { background-color: #FCE4EC; }
 #feeding { background-color: #FFF3E0; }
 #sleep { background-color: #E3F2FD; }
@@ -287,4 +290,4 @@ document.getElementById('backToTop').style.display = window.scrollY > 300 ? 'blo
 </script>
 
 </body>
-</html>  
+</html>
