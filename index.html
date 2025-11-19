@@ -31,7 +31,7 @@ gtag('config', 'G-GE4Z4MG063');
   font-family: 'Poppins', sans-serif;
 }
 
-html, body { margin: 0; padding: 0; background: var(--light-gray-bg); color: var(--dark-text); padding-top: 60px; } /* Add padding-top for banner */
+html, body { margin: 0; padding: 0; background: var(--light-gray-bg); color: var(--dark-text); padding-top: 60px; }
 a { color: var(--dusty-rose); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -119,21 +119,46 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
 
 /* Fixed Top Banner */
 #daily-tip-banner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-    background-color: var(--dusty-rose);
-    color: var(--white);
-    text-align: center;
-    padding: 12px 10px;
-    font-family: 'Poppins', sans-serif;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  animation: pulse 2.5s infinite;
 }
-#daily-tip-banner a { color: inherit; text-decoration: none; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; }
-#daily-tip-banner span { margin-right: 8px; font-weight: 500; }
-#daily-tip-banner span.tip-cta { font-weight: 700; text-transform: uppercase; color: #8C5E78; font-size: 14px; }
+
+#daily-tip-banner a {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.tip-emoji { font-size: 20px; }
+.tip-text { font-weight: 500; margin-right: 12px; }
+.tip-cta { font-weight: 700; text-transform: uppercase; font-size: 14px; color: #FFF8F0; }
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { opacity: 0.95; }
+  50% { opacity: 1; }
+  100% { opacity: 0.95; }
+}
 </style>
 </head>
 <body>
@@ -141,11 +166,11 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
 
 <!-- Fixed Top Daily Tip Banner -->
 <div id="daily-tip-banner">
-<a href="/daily-wisdom-page">
-<span>💡</span>
-<span>Thinking of piercing your newborn’s ears? Wait! Experts recommend 2–3 months—vaccines started, healing faster, immunity stronger.</span>
-<span class="tip-cta">» Read Full Tip</span>
-</a>
+  <a href="#sleep">
+    <span class="tip-emoji">💡</span>
+    <span class="tip-text" id="dailyTip">Loading tip...</span>
+    <span class="tip-cta">» Read More Full Tips in Our Bundles</span>
+  </a>
 </div>
 
 <header>
@@ -182,7 +207,7 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
 </div>
 </div>
 
-<!-- CTA -->
+<!-- Monetization CTA -->
 <div class="monetization-cta" style="background: rgba(162, 192, 176, 0.1); border: 2px solid var(--sage-green); padding: 25px; border-radius: var(--radius); text-align: center; margin-bottom: 40px;">
 <h3 style="color: var(--dusty-rose); margin-top: 0; font-size: 24px;">🎁 Exclusive Offer: Skip the Scroll!</h3>
 <p style="font-size: 18px; color: var(--dark-text); max-width: 800px; margin: 0 auto 20px;">
@@ -342,6 +367,41 @@ window.addEventListener('scroll', () => {
     const btn = document.getElementById('backToTop');
     if (window.scrollY > 300) btn.style.display = 'block';
     else btn.style.display = 'none';
+});
+
+// Daily rotating tip for banner
+const tips = [
+  "Thinking of piercing your newborn’s ears? Wait until 2–3 months—vaccines started, faster healing, stronger immunity.",
+  "Safe winter sleep: Room 20–22°C, breathable layers, swaddle for cozy nights.",
+  "Boost baby immunity with breastfeeding & gentle skin care routines.",
+  "Winter hydration tip for moms: Warm soups & lactation-friendly foods.",
+  "Prevent dry skin: Use humidifiers & non-toxic moisturizers for newborns."
+];
+const bannerColors = ['#D495A5','#E6AEBE','#F9D5C4','#C1A3D6','#FFDDE2'];
+
+function setDailyTip() {
+    const today = new Date().toDateString();
+    let storedDate = localStorage.getItem("tipDate");
+    let storedTip = localStorage.getItem("tipText");
+
+    if (storedDate === today && storedTip) {
+        document.getElementById("dailyTip").textContent = storedTip;
+    } else {
+        const newTip = tips[Math.floor(Math.random() * tips.length)];
+        document.getElementById("dailyTip").textContent = newTip;
+        localStorage.setItem("tipDate", today);
+        localStorage.setItem("tipText", newTip);
+    }
+
+    const day = new Date().getDate();
+    const colorIndex = day % bannerColors.length;
+    document.getElementById('daily-tip-banner').style.backgroundColor = bannerColors[colorIndex];
+}
+setDailyTip();
+
+document.querySelector('#daily-tip-banner a').addEventListener('click', function(e){
+  e.preventDefault();
+  document.querySelector('#sleep').scrollIntoView({ behavior: 'smooth' });
 });
 </script>
 </body>
