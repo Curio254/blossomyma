@@ -31,7 +31,7 @@ gtag('config', 'G-GE4Z4MG063');
   font-family: 'Poppins', sans-serif;
 }
 
-html, body { margin: 0; padding: 0; background: var(--light-gray-bg); color: var(--dark-text); padding-top: 60px; }
+html, body { margin: 0; padding: 0; background: var(--light-gray-bg); color: var(--dark-text); padding-top: 60px; } /* padding for top banner */
 a { color: var(--dusty-rose); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -119,46 +119,20 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
 
 /* Fixed Top Banner */
 #daily-tip-banner {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-  color: #ffffff;
-  text-align: center;
-  padding: 12px 20px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  animation: pulse 2.5s infinite;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    color: #000000; /* text always black */
+    text-align: center;
+    padding: 12px 10px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
-#daily-tip-banner a {
-  display: flex;
-  align-items: center;
-  color: inherit;
-  text-decoration: none;
-  width: 100%;
-  justify-content: center;
-}
-
-.tip-emoji { font-size: 20px; }
-.tip-text { font-weight: 500; margin-right: 12px; }
-.tip-cta { font-weight: 700; text-transform: uppercase; font-size: 14px; color: #FFF8F0; }
-
-/* Pulse animation */
-@keyframes pulse {
-  0% { opacity: 0.95; }
-  50% { opacity: 1; }
-  100% { opacity: 0.95; }
-}
+#daily-tip-banner a { color: inherit; text-decoration: none; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; }
+#daily-tip-banner span { margin-right: 8px; font-weight: 500; }
+#daily-tip-banner span.tip-cta { font-weight: 700; text-transform: uppercase; color: #8C5E78; font-size: 14px; }
 </style>
 </head>
 <body>
@@ -166,11 +140,11 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
 
 <!-- Fixed Top Daily Tip Banner -->
 <div id="daily-tip-banner">
-  <a href="#sleep">
-    <span class="tip-emoji">💡</span>
-    <span class="tip-text" id="dailyTip">Loading tip...</span>
-    <span class="tip-cta">» Read More Full Tips in Our Bundles</span>
-  </a>
+<a href="/daily-wisdom-page">
+<span>💡</span>
+<span id="daily-tip-text">Thinking of piercing your newborn’s ears? Wait! Experts recommend 2–3 months—vaccines started, healing faster, immunity stronger.</span>
+<span class="tip-cta">» Read Full Tip</span>
+</a>
 </div>
 
 <header>
@@ -207,7 +181,7 @@ footer { text-align: center; color: var(--light-text); font-size: 14px; margin-t
 </div>
 </div>
 
-<!-- Monetization CTA -->
+<!-- CTA -->
 <div class="monetization-cta" style="background: rgba(162, 192, 176, 0.1); border: 2px solid var(--sage-green); padding: 25px; border-radius: var(--radius); text-align: center; margin-bottom: 40px;">
 <h3 style="color: var(--dusty-rose); margin-top: 0; font-size: 24px;">🎁 Exclusive Offer: Skip the Scroll!</h3>
 <p style="font-size: 18px; color: var(--dark-text); max-width: 800px; margin: 0 auto 20px;">
@@ -248,7 +222,7 @@ Download the <strong>Ultimate Winter Maternity & Newborn Hospital Prep Bundle</s
 </section>
 
 <section id="sleep" class="card">
-<a href="https://payhip.com/b/G7eKz" class="button" style="margin-bottom:10px;">🍼 Complete Sleep & Recovery System: Baby + Mom</a>
+<a href="https://payhip.com/b/G7eKz" class="button" style="margin-bottom:10px;">🍼 Complete Sleep & Recovery System: Baby + Mom - $9.99</a>
 <h2>🍼 Complete Sleep & Recovery System: Baby + Mom</h2>
 <p>Transform nights with expert-approved newborn sleep techniques, gentle bedtime cues, and a maternal wellness schedule. Includes winter-safe sleep guidance, lactation-friendly meals, and postpartum recovery strategies. Grab your full winter sleep & recovery bundle now!</p>
 <ul>
@@ -256,7 +230,7 @@ Download the <strong>Ultimate Winter Maternity & Newborn Hospital Prep Bundle</s
 <li>🧣 Sleepwear layering for winter comfort.</li>
 <li>🌙 Soothing bedtime cues and routines.</li>
 </ul>
-<a class="button" href="https://payhip.com/b/G7eKz">Get Bundle</a>
+<a class="button" href="https://payhip.com/b/G7eKz">Get Bundle - $9.99</a>
 </section>
 
 <section id="health" class="card">
@@ -332,9 +306,7 @@ Download the <strong>Ultimate Winter Maternity & Newborn Hospital Prep Bundle</s
 
 <script src="https://www.paypal.com/sdk/js?client-id=AZXqUORsfzvKK9Rr3kVxdiAEiF9MFV2Mu9bWqgnCIAyrVER8-6tkl8SFMWSmQCoQgcCeQu0342mtFNNW&currency=USD"></script>
 <script>
-function setAmount(value) {
-    document.getElementById('donationAmount').value = value;
-}
+function setAmount(value) { document.getElementById('donationAmount').value = value; }
 
 paypal.Buttons({
     style: { layout: 'horizontal', color: 'gold', shape: 'pill', label: 'donate', height: 40 },
@@ -365,44 +337,28 @@ document.querySelectorAll('.read-more-btn').forEach(btn => {
 function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 window.addEventListener('scroll', () => {
     const btn = document.getElementById('backToTop');
-    if (window.scrollY > 300) btn.style.display = 'block';
-    else btn.style.display = 'none';
+    btn.style.display = window.scrollY > 300 ? 'block' : 'none';
 });
 
-// Daily rotating tip for banner
+// Rotating Daily Tips
 const tips = [
-  "Thinking of piercing your newborn’s ears? Wait until 2–3 months—vaccines started, faster healing, stronger immunity.",
-  "Safe winter sleep: Room 20–22°C, breathable layers, swaddle for cozy nights.",
-  "Boost baby immunity with breastfeeding & gentle skin care routines.",
-  "Winter hydration tip for moms: Warm soups & lactation-friendly foods.",
-  "Prevent dry skin: Use humidifiers & non-toxic moisturizers for newborns."
+    "Thinking of piercing your newborn’s ears? Wait! Experts recommend 2–3 months—vaccines started, healing faster, immunity stronger.",
+    "Winter baby skin can dry quickly. Use fragrance-free moisturizers daily for delicate skin.",
+    "Ensure your newborn’s room is humidified in winter to prevent congestion and dry nasal passages.",
+    "Layer baby’s sleepwear in winter: base layer, sleep sack, and light blanket if needed."
 ];
-const bannerColors = ['#D495A5','#E6AEBE','#F9D5C4','#C1A3D6','#FFDDE2'];
-
-function setDailyTip() {
-    const today = new Date().toDateString();
-    let storedDate = localStorage.getItem("tipDate");
-    let storedTip = localStorage.getItem("tipText");
-
-    if (storedDate === today && storedTip) {
-        document.getElementById("dailyTip").textContent = storedTip;
-    } else {
-        const newTip = tips[Math.floor(Math.random() * tips.length)];
-        document.getElementById("dailyTip").textContent = newTip;
-        localStorage.setItem("tipDate", today);
-        localStorage.setItem("tipText", newTip);
-    }
-
-    const day = new Date().getDate();
-    const colorIndex = day % bannerColors.length;
-    document.getElementById('daily-tip-banner').style.backgroundColor = bannerColors[colorIndex];
+let tipIndex = 0;
+function rotateTip() {
+    document.getElementById('daily-tip-text').textContent = tips[tipIndex];
+    tipIndex = (tipIndex + 1) % tips.length;
 }
-setDailyTip();
+setInterval(rotateTip, 8000); // every 8s
 
-document.querySelector('#daily-tip-banner a').addEventListener('click', function(e){
-  e.preventDefault();
-  document.querySelector('#sleep').scrollIntoView({ behavior: 'smooth' });
-});
+// Daily Rotating Banner Background
+const bannerColors = ["#FCE4EC","#FFF3E0","#E3F2FD","#E8F5E9","#F3E5F5","#FFFDE7"];
+const today = new Date();
+const colorIndex = today.getDate() % bannerColors.length;
+document.getElementById('daily-tip-banner').style.backgroundColor = bannerColors[colorIndex];
 </script>
 </body>
 </html>
