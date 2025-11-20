@@ -93,8 +93,8 @@ footer{text-align:center;color:var(--light-text);font-size:14px;margin-top:auto;
 .blog-post a:hover{background:#c87c91}
 @media(max-width:600px){.site{padding:15px;margin:10px auto}.hero,.feedback-donate{display:block}}
 </style>
-
 </head>
+
 <body>
 <div class="site">
 
@@ -111,7 +111,7 @@ footer{text-align:center;color:var(--light-text);font-size:14px;margin-top:auto;
 <!-- Header -->
 <header>
 <div class="logo">
-<a href="index.html"><img src="logo.png" alt="BlossomyMa Logo - Winter & Christmas Baby Care Tips" class="site-logo"></a>
+<img src="logo.png" alt="BlossomyMa Logo - Winter & Christmas Baby Care Tips" class="site-logo">
 <p class="lead">Winter & Christmas Baby Care Tips</p>
 </div>
 </header>
@@ -124,7 +124,7 @@ footer{text-align:center;color:var(--light-text);font-size:14px;margin-top:auto;
 <a href="#health">Health</a>
 <a href="#winter-care">Winter Care</a>
 <a href="#christmas-gifts">Christmas Gifts</a>
-<a href="/blog/index.html">Blog</a>
+<a href="#blog-section">Blog</a>
 </nav>
 
 <!-- Hero -->
@@ -242,112 +242,69 @@ Download the <strong>Ultimate Winter Maternity & Newborn Hospital Prep Bundle</s
 
 <div class="blog-post">
 <h3>Nordic vs Canada: Newborn Care in Winter</h3>
-<p>Learn how parents in <strong>Sweden, Norway, Denmark, Finland, and Iceland</strong> keep babies safe, cozy, and healthy in winter versus Canadian practices. Discover expert tips on layering, outdoor naps, cozy home routines, and creating the perfect winter nursery environment.</p>
-<ul>
-<li>🌬️ Outdoor naps in the Nordic region – fresh air for stronger immunity</li>
-<li>🧣 Winter layering tips – breathable, flexible, and warm clothing for newborns</li>
-<li>🏠 Cozy home hacks – soft textiles, gentle heating, and sleep routines</li>
-<li>🎨 Creative Christmas decor for newborn rooms – we love downloading designs from <a href="https://www.creativefabrica.com/ref/16954939/" target="_blank">Creative Fabrica</a>!</li>
-</ul>
-<a href="/blog/nordic-vs-canada-newborn-care.html">Read More & Explore Winter Baby Care</a>
+<p>Learn how parents in <strong>Sweden, Norway, Denmark, Finland, and Iceland</strong> keep their babies warm even in freezing temperatures — and how you can adapt these methods at home.</p>
+<a href="blog-nordic-winter-baby-tips.html">Read More</a>
 </div>
 
-<div class="blog-post">
-<h3>Top 5 Winter Baby Care Hacks</h3>
-<p>Keep your newborn cozy and healthy during the cold season with simple daily routines, clothing tips, and sleep strategies for winter nights.</p>
-<a href="/blog/top-5-winter-baby-care-hacks.html">Read More & Shop Recommended Products</a>
-</div>
-
-<div class="blog-post">
-<h3>Newborn Sleep Tips for Winter Nights</h3>
-<p>Discover expert-backed tips to help your baby sleep soundly even in chilly months, including layering, room temperature, and bedtime cues.</p>
-<a href="/blog/newborn-sleep-tips-winter.html">Read More & Explore Sleep Bundle</a>
-</div>
-
-<div class="blog-post">
-<h3>Holiday Gift Guide for New Parents</h3>
-<p>Find the perfect winter-friendly gifts for babies and new parents this Christmas, including cozy winter clothing and educational toys.</p>
-<a href="/blog/holiday-gift-guide.html">Read More & Grab Your Bundle</a>
-</div>
+<!-- Add other blog posts here with correct links -->
 </section>
 
-<!-- Feedback & Donate -->
+<!-- Feedback & Donation -->
 <section id="feedback-donate" class="feedback-donate">
-<h2>Connect With Us & Support BlossomyMa</h2>
 <div class="feedback-form">
-<h3>Send Your Feedback</h3>
-<form action="https://formspree.io/f/xjkjokor" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="_replyto" placeholder="Your Email" required>
-<textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-<input type="submit" value="Send Feedback & Get Menu">
+<h2>Give Feedback & Get Your Free Tip</h2>
+<form action="#">
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea placeholder="Your Feedback"></textarea>
+<input type="submit" value="Submit">
 </form>
 </div>
-
 <div class="donate">
-<h3>Help Keep Our Tips Free</h3>
-<button onclick="setAmount(5)">Donate $5</button>
-<button onclick="setAmount(10)">Donate $10</button>
-<button onclick="setAmount(20)">Donate $20</button>
-<input type="number" id="donationAmount" value="5" min="1">
+<h3>Support Us</h3>
+<input type="number" id="donationAmount" placeholder="Amount $">
+<button id="donateBtn">Donate</button>
 <div id="paypal-button-container"></div>
 </div>
 </section>
 
-<!-- Footer -->
 <footer>
-<div>© 2025 BlossomyMa. All Rights Reserved.</div>
-<div style="margin-top:8px;">
-<a href="affiliatedisclosure.html">Affiliate Disclosure</a> | 
-<a href="privacy.html">Privacy Policy</a> | 
-<a href="terms.html">Terms & Conditions</a>
-</div>
+© 2025 BlossomyMa. All Rights Reserved.
 </footer>
 
-<button id="backToTop" onclick="scrollToTop()">↑</button>
+<div id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</div>
 
-<script src="https://www.paypal.com/sdk/js?client-id=AZXqUORsfzvKK9Rr3kVxdiAEiF9MFV2Mu9bWqgnCIAyrVER8-6tkl8SFMWSmQCoQgcCeQu0342mtFNNW&currency=USD"></script>
 <script>
-// Accordion for Read More
-document.querySelectorAll('.read-more-btn').forEach(b=>{
-  b.addEventListener('click',()=>{
-    const c=b.previousElementSibling;
-    c.style.maxHeight=(c.style.maxHeight&&c.style.maxHeight!=="0px")?"0px":c.scrollHeight+"px";
-    b.innerText=(b.innerText==="Read More")?"Read Less":"Read More";
-  })
-});
-
-// Scroll to Top
-function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'})}
-window.addEventListener('scroll',()=>{document.getElementById('backToTop').style.display=window.scrollY>300?"block":"none"})
-
-// Daily tip scroll highlight
-document.querySelectorAll('#daily-tip-banner a[href="#sleep"]').forEach(l=>{
+// Daily tip scroll highlight if linked
+document.querySelectorAll('#daily-tip-banner a[href^="#"]').forEach(l=>{
   l.addEventListener('click',function(e){
     e.preventDefault();
-    const t=document.querySelector('#sleep');
-    t.scrollIntoView({behavior:'smooth'});
-    const o=t.style.backgroundColor;
-    t.style.backgroundColor='#FFFACD';
-    setTimeout(()=>{t.style.backgroundColor=o||''},1000)
-  })
+    const target=document.querySelector(this.getAttribute('href'));
+    if(target){
+      target.scrollIntoView({behavior:'smooth'});
+      const bg=target.style.backgroundColor;
+      target.style.backgroundColor='#FFFACD';
+      setTimeout(()=>{target.style.backgroundColor=bg||''},1000);
+    }
+  });
 });
 
-// PayPal Donate Buttons
-function setAmount(value){document.getElementById('donationAmount').value=value}
-paypal.Buttons({
-  style:{layout:'horizontal',color:'gold',shape:'pill',label:'donate',height:40},
-  createOrder:function(d,a){
-    const e=document.getElementById('donationAmount').value;
-    return a.order.create({purchase_units:[{amount:{value:e}}]})
-  },
-  onApprove:function(d,a){
-    return a.order.capture().then(function(t){
-      alert('Thank you for your donation, '+t.payer.name.given_name+'!')
-    })
-  }
-}).render('#paypal-button-container');
+// Collapsible Read More
+document.querySelectorAll('.read-more-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const coll=btn.previousElementSibling.querySelector('.collapsible');
+    if(coll){
+      coll.style.maxHeight=coll.style.maxHeight?null:coll.scrollHeight+"px";
+    }
+  });
+});
+
+// Back to top button
+window.addEventListener('scroll',()=>{
+  const btn=document.getElementById('backToTop');
+  btn.style.display=(window.scrollY>300)?'block':'none';
+});
 </script>
 
+</div>
 </body>
 </html>
