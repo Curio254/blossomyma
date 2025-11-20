@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BlossomyMa - Winter & Christmas Baby Care Tips</title>
 <meta name="description" content="Ultimate Winter Hospital Bag & Baby Care Guide. Pack stress-free for mom, partner, and newborn. Download our printable Winter Maternity & Newborn Hospital Prep Bundle.">
-<meta name="keywords" content="winter baby care, newborn winter safety, cold climate parenting, winter hospital bag, winter breastfeeding, postpartum winter care, baby, pregnancy, breastfeeding, baby formula, infant formula, baby sleep, baby clothes, newborn baby clothes, crib, breastfeeding pumps, breastfeeding positions, breastfeeding vs formula, exclusive breastfeeding, daycare near me, infant daycare near me, newborn care, infant CPR, baby monitor, safe sleep, safe sleep position, co-sleeping, infant car seat, first time mom, Canada winter baby, Norway winter newborn, Sweden winter sleeping, Finland cold weather baby, Iceland winter parenting, Greenland infant care cold">
+<meta name="keywords" content="winter baby care, newborn winter safety, cold climate parenting, winter hospital bag, winter breastfeeding, postpartum winter care, baby, pregnancy, breastfeeding, baby formula, infant formula, baby sleep, baby clothes, newborn baby clothes, crib, breastfeeding pumps, breastfeeding positions, breastfeeding vs formula, exclusive breastfeeding, daycare near me, infant daycare near me, newborn care, infant CPR, baby monitor, safe sleep, safe sleep position, co-sleeping, infant car seat, first time mom">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -83,21 +83,16 @@ footer{text-align:center;color:var(--light-text);font-size:14px;margin-top:auto;
 .tip-cta{font-weight:700;text-transform:uppercase;font-size:14px}
 .menu-cta{font-weight:600;animation:pulse 2s infinite}
 @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.02)}100%{transform:scale(1)}}
+.blog-section{margin-bottom:40px}
+.blog-section h2{text-align:center;color:var(--dusty-rose);margin-bottom:30px}
+.blog-post{border:1px solid #e0e0e0;background:#fff;padding:20px;border-radius:var(--radius);margin-bottom:20px;box-shadow:0 4px 8px rgba(0,0,0,.05)}
+.blog-post h3{margin-top:0;color:var(--dusty-rose)}
+.blog-post p{margin:10px 0}
+.blog-post a{display:inline-block;margin-top:10px;color:white;background:var(--dusty-rose);padding:10px 15px;border-radius:8px;text-decoration:none;font-weight:600}
+.blog-post a:hover{background:#c87c91}
 @media(max-width:600px){.site{padding:15px;margin:10px auto}.hero,.feedback-donate{display:block}}
 </style>
 
-<!-- Structured FAQ JSON-LD -->
-<script type="application/ld+json">
-{
-"@context":"https://schema.org",
-"@type":"FAQPage",
-"mainEntity":[
-{"@type":"Question","name":"When should I pack my winter hospital bag?","acceptedAnswer":{"@type":"Answer","text":"Pack essentials for mom, partner, and baby ahead of time to reduce stress during winter hospital visits."}},
-{"@type":"Question","name":"How do I keep my newborn safe in cold weather?","acceptedAnswer":{"@type":"Answer","text":"Dress the baby in layers, use warm bedding, maintain a cozy indoor temperature, and monitor for overheating or chills."}},
-{"@type":"Question","name":"How can I improve postpartum recovery in winter?","acceptedAnswer":{"@type":"Answer","text":"Use warm compresses, maintain hydration, follow nutrition guides, and include gentle physical activity to support recovery."}}
-]
-}
-</script>
 </head>
 <body>
 <div class="site">
@@ -128,6 +123,7 @@ footer{text-align:center;color:var(--light-text);font-size:14px;margin-top:auto;
 <a href="#health">Health</a>
 <a href="#winter-care">Winter Care</a>
 <a href="#christmas-gifts">Christmas Gifts</a>
+<a href="#blog-section">Blog</a>
 </nav>
 
 <!-- Hero -->
@@ -240,5 +236,105 @@ Download the <strong>Ultimate Winter Maternity & Newborn Hospital Prep Bundle</s
 </div>
 
 <!-- Blog Section -->
-<section id="blog-section" style="margin-bottom:40px;">
-  <h2 style="color: var(--dusty-rose); text-align:center; margin-bottom:30px;">📝 Latest Blog Posts
+<section id="blog-section" class="blog-section">
+<h2>📝 Latest Blog Posts</h2>
+
+<div class="blog-post">
+<h3>Top 5 Winter Baby Care Hacks</h3>
+<p>Learn how to keep your newborn cozy and healthy during the cold season with simple daily routines.</p>
+<a href="#">Read More & Shop Recommended Products</a>
+</div>
+
+<div class="blog-post">
+<h3>Newborn Sleep Tips for Winter Nights</h3>
+<p>Discover expert-backed tips to help your baby sleep soundly even in the chilly months.</p>
+<a href="#">Read More & Explore Sleep Bundle</a>
+</div>
+
+<div class="blog-post">
+<h3>Holiday Gift Guide for New Parents</h3>
+<p>Find the perfect winter-friendly gifts for babies and new parents this Christmas.</p>
+<a href="#">Read More & Grab Your Bundle</a>
+</div>
+</section>
+
+<!-- Feedback & Donate -->
+<section id="feedback-donate" class="feedback-donate">
+<h2>Connect With Us & Support BlossomyMa</h2>
+<div class="feedback-form">
+<h3>Send Your Feedback</h3>
+<form action="https://formspree.io/f/xjkjokor" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="_replyto" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+<input type="submit" value="Send Feedback & Get Menu">
+</form>
+</div>
+
+<div class="donate">
+<h3>Help Keep Our Tips Free</h3>
+<button onclick="setAmount(5)">Donate $5</button>
+<button onclick="setAmount(10)">Donate $10</button>
+<button onclick="setAmount(20)">Donate $20</button>
+<input type="number" id="donationAmount" value="5" min="1">
+<div id="paypal-button-container"></div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div>© 2025 BlossomyMa. All Rights Reserved.</div>
+<div style="margin-top:8px;">
+<a href="affiliatedisclosure.html">Affiliate Disclosure</a> | 
+<a href="privacy.html">Privacy Policy</a> | 
+<a href="terms.html">Terms & Conditions</a>
+</div>
+</footer>
+
+<button id="backToTop" onclick="scrollToTop()">↑</button>
+
+<script src="https://www.paypal.com/sdk/js?client-id=AZXqUORsfzvKK9Rr3kVxdiAEiF9MFV2Mu9bWqgnCIAyrVER8-6tkl8SFMWSmQCoQgcCeQu0342mtFNNW&currency=USD"></script>
+<script>
+// Accordion for Read More
+document.querySelectorAll('.read-more-btn').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const c=b.previousElementSibling;
+    c.style.maxHeight=(c.style.maxHeight&&c.style.maxHeight!=="0px")?"0px":c.scrollHeight+"px";
+    b.innerText=(b.innerText==="Read More")?"Read Less":"Read More";
+  })
+});
+
+// Scroll to Top
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'})}
+window.addEventListener('scroll',()=>{document.getElementById('backToTop').style.display=window.scrollY>300?"block":"none"})
+
+// Daily tip scroll highlight
+document.querySelectorAll('#daily-tip-banner a[href="#sleep"]').forEach(l=>{
+  l.addEventListener('click',function(e){
+    e.preventDefault();
+    const t=document.querySelector('#sleep');
+    t.scrollIntoView({behavior:'smooth'});
+    const o=t.style.backgroundColor;
+    t.style.backgroundColor='#FFFACD';
+    setTimeout(()=>{t.style.backgroundColor=o||''},1000)
+  })
+});
+
+// PayPal Donate Buttons
+function setAmount(value){document.getElementById('donationAmount').value=value}
+paypal.Buttons({
+  style:{layout:'horizontal',color:'gold',shape:'pill',label:'donate',height:40},
+  createOrder:function(d,a){
+    const e=document.getElementById('donationAmount').value;
+    return a.order.create({purchase_units:[{amount:{value:e}}]})
+  },
+  onApprove:function(d,a){
+    return a.order.capture().then(function(t){
+      alert('Thank you for your donation, '+t.payer.name.given_name+'!')
+    })
+  }
+}).render('#paypal-button-container');
+</script>
+
+</body>
+</html>
